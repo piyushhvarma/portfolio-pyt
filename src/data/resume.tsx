@@ -41,12 +41,12 @@ export const DATA = {
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
-    email: "hello@example.com",
-    tel: "+123456789",
+    email: "pytworks@gmail.com",
+    tel: "+91 8999257783",
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://dub.sh/dillion-github",
+        url: "https://github.com/piyushhvarma",
         icon: Icons.github,
         navbar: true,
       },
