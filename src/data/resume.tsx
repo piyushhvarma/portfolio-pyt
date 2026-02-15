@@ -16,8 +16,8 @@ export const DATA = {
   name: "Piyush Varma",
   initials: "PV",
   url: "https://piyushhvarma.dev",
-  location: "San Francisco, CA",
-  locationLink: "https://www.google.com/maps/place/sanfrancisco",
+  location: "Jaipur, IN",
+  locationLink: "https://www.google.com/maps/place/jaipur",
   description:
     "Software Engineer turned Entrepreneur. I love building things and helping people. Very active on Twitter.",
   summary:
