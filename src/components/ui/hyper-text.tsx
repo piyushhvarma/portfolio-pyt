@@ -166,7 +166,7 @@ export function HyperText({
   return (
     <MotionComponent
       ref={elementRef}
-      className={cn("overflow-hidden inline-flex", className)}
+      className={cn("inline-flex", className)}
       onMouseEnter={handleAnimationTrigger}
       {...props}
     >
