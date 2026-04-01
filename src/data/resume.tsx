@@ -60,14 +60,14 @@ export const DATA = {
       },
       X: {
         name: "X",
-        url: "https://dub.sh/dillion-twitter",
+        url: "",
         icon: Icons.x,
 
         navbar: true,
       },
       Youtube: {
         name: "Youtube",
-        url: "https://dub.sh/dillion-youtube",
+        url: "",
         icon: Icons.youtube,
         navbar: true,
       },
@@ -83,7 +83,7 @@ export const DATA = {
 
   work: [
     {
-      company: "Atomic Finance",
+      company: "Girls script summer of code",
       href: "https://atomic.finance",
       badges: [],
       location: "Remote",
