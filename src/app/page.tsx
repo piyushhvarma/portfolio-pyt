@@ -2,7 +2,6 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { HyperText } from "@/components/ui/hyper-text";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
-import { ScrollAvatar } from "@/components/ui/scroll-avatar";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -22,8 +21,8 @@ const BLUR_FADE_DELAY = 0.04;
 export default function Page() {
   return (
     <main className="min-h-dvh flex flex-col gap-14 relative">
-      <section id="hero" className="relative h-[150vh]">
-        <div className="sticky top-12 sm:top-24 mx-auto w-full max-w-2xl space-y-8">
+      <section id="hero">
+        <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 gap-y-6 flex flex-col md:flex-row justify-between">
             <div className="gap-2 flex flex-col order-2 md:order-1 pt-2">
               <BlurFade
@@ -38,7 +37,10 @@ export default function Page() {
               </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
-              <ScrollAvatar />
+              <div className="relative size-24 md:size-32 rounded-full overflow-hidden border shadow-lg ring-4 ring-muted group flex-shrink-0 cursor-pointer">
+                <img src="/pyt2.png" alt="Avatar" className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0" />
+                <img src="/pyt1.png" alt="Avatar Variant" className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              </div>
             </BlurFade>
           </div>
         </div>
