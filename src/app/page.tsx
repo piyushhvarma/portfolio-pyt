@@ -2,7 +2,7 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { HyperText } from "@/components/ui/hyper-text";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { ScrollPhoto } from "@/components/ui/scroll-photo";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -23,29 +23,31 @@ export default function Page() {
   return (
     <main className="min-h-dvh flex flex-col gap-14 relative">
       <section id="hero">
-        <div className="mx-auto w-full max-w-2xl space-y-8">
-          <div className="gap-2 gap-y-6 flex flex-col md:flex-row justify-between">
-            <div className="gap-2 flex flex-col order-2 md:order-1">
-              <BlurFade
-                delay={BLUR_FADE_DELAY}
-                className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
-                yOffset={8}
-              >
-                Hi, I&apos;m <HyperText className="inline-block">{DATA.name.split(" ")[0]}</HyperText>
-              </BlurFade>
-              <BlurFadeText
-                className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl"
-                delay={BLUR_FADE_DELAY}
-                text={DATA.description}
-              />
-            </div>
-            <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
-              <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-                <AvatarFallback>{DATA.initials}</AvatarFallback>
-              </Avatar>
-            </BlurFade>
-          </div>
+        <div className="mx-auto w-full max-w-2xl space-y-6">
+          <BlurFade
+            delay={BLUR_FADE_DELAY}
+            className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
+            yOffset={8}
+          >
+            <span className="inline-block animate-[wave_2.5s_ease-in-out_infinite] origin-[70%_70%]">👋</span>{" "}
+            Hellooooo!! Wassup, {" "} this side --{" "}
+            <br className="sm:hidden" />
+            I&apos;m <HyperText className="inline-block">{DATA.name.split(" ")[0]}</HyperText>
+          </BlurFade>
+        </div>
+      </section>
+      <section id="photo">
+        <BlurFade delay={BLUR_FADE_DELAY * 2}>
+          <ScrollPhoto />
+        </BlurFade>
+      </section>
+      <section id="description">
+        <div className="mx-auto w-full max-w-2xl">
+          <BlurFadeText
+            className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl"
+            delay={BLUR_FADE_DELAY * 2.5}
+            text={DATA.description}
+          />
         </div>
       </section>
       <section id="about">
