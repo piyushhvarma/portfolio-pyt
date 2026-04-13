@@ -2,7 +2,7 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { HyperText } from "@/components/ui/hyper-text";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
-import { ScrollPhoto } from "@/components/ui/scroll-photo";
+import { ScrollAvatar } from "@/components/ui/scroll-avatar";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -22,24 +22,26 @@ const BLUR_FADE_DELAY = 0.04;
 export default function Page() {
   return (
     <main className="min-h-dvh flex flex-col gap-14 relative">
-      <section id="hero">
-        <div className="mx-auto w-full max-w-2xl space-y-6">
-          <BlurFade
-            delay={BLUR_FADE_DELAY}
-            className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
-            yOffset={8}
-          >
-            <span className="inline-block animate-[wave_2.5s_ease-in-out_infinite] origin-[70%_70%]">👋</span>{" "}
-            Hellooooo!! Wassup, {" "} this side --{" "}
-            <br className="sm:hidden" />
-            I&apos;m <HyperText className="inline-block">{DATA.name.split(" ")[0]}</HyperText>
-          </BlurFade>
+      <section id="hero" className="relative h-[150vh]">
+        <div className="sticky top-12 sm:top-24 mx-auto w-full max-w-2xl space-y-8">
+          <div className="gap-2 gap-y-6 flex flex-col md:flex-row justify-between">
+            <div className="gap-2 flex flex-col order-2 md:order-1 pt-2">
+              <BlurFade
+                delay={BLUR_FADE_DELAY}
+                className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
+                yOffset={8}
+              >
+                <span className="inline-block animate-[wave_2.5s_ease-in-out_infinite] origin-[70%_70%]">👋</span>{" "}
+                Hellooooo!! Wassup, {" "} this side --{" "}
+                <br className="sm:hidden" />
+                I&apos;m <HyperText className="inline-block">{DATA.name.split(" ")[0]}</HyperText>
+              </BlurFade>
+            </div>
+            <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
+              <ScrollAvatar />
+            </BlurFade>
+          </div>
         </div>
-      </section>
-      <section id="photo">
-        <BlurFade delay={BLUR_FADE_DELAY * 2}>
-          <ScrollPhoto />
-        </BlurFade>
       </section>
       <section id="description">
         <div className="mx-auto w-full max-w-2xl">
