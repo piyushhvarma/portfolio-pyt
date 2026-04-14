@@ -30,11 +30,18 @@ export default function Page() {
                 className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
                 yOffset={8}
               >
-                <span className="inline-block animate-[wave_2.5s_ease-in-out_infinite] origin-[70%_70%]">👋</span>{" "}
-                Hellooooo!! Wassup, {" "} this side --{" "}
-                <br className="sm:hidden" />
-                I&apos;m <HyperText className="inline-block">{DATA.name.split(" ")[0]}</HyperText>
+                Helloooo,{" "}
+                <span className="relative inline-flex justify-center">
+                  <span className="invisible">Piyush</span>
+                  <HyperText className="absolute inset-0 flex items-center justify-center whitespace-nowrap">piyush</HyperText>
+                </span>{" "}
+                this side
               </BlurFade>
+              <BlurFadeText
+                className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl"
+                delay={BLUR_FADE_DELAY * 2.5}
+                text={DATA.description}
+              />
             </div>
             <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
               <div className="relative size-24 md:size-32 rounded-full overflow-hidden border shadow-lg ring-4 ring-muted group flex-shrink-0 cursor-pointer">
@@ -45,15 +52,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="description">
-        <div className="mx-auto w-full max-w-2xl">
-          <BlurFadeText
-            className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl"
-            delay={BLUR_FADE_DELAY * 2.5}
-            text={DATA.description}
-          />
-        </div>
-      </section>
+
       <section id="about">
         <div className="flex min-h-0 flex-col gap-y-4">
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
