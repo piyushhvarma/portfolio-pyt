@@ -250,7 +250,7 @@ export const DATA = {
           icon: <GitPullRequest className="size-3" />,
         },
       ],
-      image: "",
+      image: "/gssoc/habit-tracker.png",
       video: "",
     },
     {
@@ -274,7 +274,7 @@ export const DATA = {
           icon: <GitPullRequest className="size-3" />,
         },
       ],
-      image: "",
+      image: "/gssoc/research-paper-organizer.png",
       video: "",
     },
     {
@@ -298,7 +298,7 @@ export const DATA = {
           icon: <GitPullRequest className="size-3" />,
         },
       ],
-      image: "",
+      image: "/gssoc/cawnpore.png",
       video: "",
     },
     {
@@ -322,7 +322,7 @@ export const DATA = {
           icon: <GitPullRequest className="size-3" />,
         },
       ],
-      image: "",
+      image: "/gssoc/nitra-mitra.png",
       video: "",
     },
     {
@@ -346,7 +346,7 @@ export const DATA = {
           icon: <GitPullRequest className="size-3" />,
         },
       ],
-      image: "",
+      image: "/gssoc/rigcrafter.png",
       video: "",
     },
     {
@@ -370,7 +370,7 @@ export const DATA = {
           icon: <GitPullRequest className="size-3" />,
         },
       ],
-      image: "",
+      image: "/gssoc/deshdarshan.png",
       video: "",
     },
     {
@@ -394,7 +394,7 @@ export const DATA = {
           icon: <GitPullRequest className="size-3" />,
         },
       ],
-      image: "",
+      image: "/gssoc/rewear.png",
       video: "",
     },
     {
