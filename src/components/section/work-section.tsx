@@ -97,4 +97,5 @@ export default function WorkSection() {
       ))}
     </Accordion>
   );
+}
 
