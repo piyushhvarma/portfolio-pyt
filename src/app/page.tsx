@@ -7,6 +7,7 @@ import Markdown from "react-markdown";
 import ContactSection from "@/components/section/contact-section";
 import ProjectsSection from "@/components/section/projects-section";
 import ContributionsSection from "@/components/section/contributions-section";
+import GithubCalendarSection from "@/components/section/github-calendar-section";
 import WorkSection from "@/components/section/work-section";
 import HeroTitleLoop from "@/components/ui/hero-title-loop";
 import { ArrowUpRight } from "lucide-react";
@@ -91,6 +92,14 @@ export default function Page() {
         <div className="flex min-h-0 flex-col gap-y-4 mb-4">
           <BlurFade delay={BLUR_FADE_DELAY * 3.8}>
             <ContributionsSection />
+          </BlurFade>
+        </div>
+      </section>
+
+      <section id="activity">
+        <div className="flex min-h-0 flex-col gap-y-4 mb-4">
+          <BlurFade delay={BLUR_FADE_DELAY * 3.9}>
+            <GithubCalendarSection />
           </BlurFade>
         </div>
       </section>
