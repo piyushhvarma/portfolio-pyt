@@ -107,7 +107,7 @@ export const DATA = {
       start: "Oct 2025",
       end: "Nov 2025",
       description:
-        "Implemented a custom Kubernetes controller in Go to automate the deployment of MySQL and ProxySQL custom resources in order to enable 2,000+ internal developers to instantly deploy their app databases to production. Wrote several scripts in Go to automate MySQL database failovers while maintaining master-slave replication topologies and keeping Zookeeper nodes consistent with changes.",
+        "Successfully contributed to 6+ open-source repositories with 13+ merged pull requests during Hacktoberfest 2025. Focused on enhancing UI/UX interactivity, implementing persistent theme engines, and optimizing web performance. Engineered specialized components such as glassmorphism sidebars, smooth-scroll utilities, and interactive developer tools while adhering to accessibility-first design standards.",
     },
   ],
   education: [
