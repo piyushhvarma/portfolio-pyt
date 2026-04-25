@@ -45,17 +45,17 @@ export default function GithubCalendarSection() {
                     fill: hsl(0 0% 90%);
                 }
             `}</style>
-            <div className="w-full flex justify-center mt-2 group relative z-10 pt-8">
+            <div className="w-full flex justify-center mt-6 group relative z-10">
                 {mounted ? (
-                    // Removing overflow-hidden so tooltips can float out! SVG forced shrinking is retained.
-                    <div className="w-full max-w-[800px] flex justify-center pb-2 [&_svg]:!max-w-full [&_svg]:!w-full [&_svg]:!h-auto">
+                    // Expanded width by explicitly allocating the calendar up to 110% of standard boundaries, giving horizontal scale a massive boost while keeping the vector strictly compliant
+                    <div className="w-full sm:w-[110%] sm:-translate-x-[5%] max-w-[900px] flex justify-center pb-2 [&_svg]:!max-w-full [&_svg]:!w-full [&_svg]:!h-auto">
                         <GitHubCalendar 
                             username="piyushhvarma"
-                            blockSize={12}
+                            blockSize={16}
                             blockMargin={4}
                             blockRadius={3}
                             colorScheme={(resolvedTheme === 'dark' || theme === 'dark') ? 'dark' : 'light'}
-                            fontSize={12}
+                            fontSize={16}
                             // @ts-ignore
                             hideScrollbar={true}
                             tooltips={{
