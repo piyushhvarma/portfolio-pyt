@@ -44,6 +44,7 @@ export default function ContributionsSection() {
                                 description={project.description}
                                 dates={project.dates}
                                 tags={project.technologies}
+                                program={project.program}
                                 image={project.image}
                                 video={project.video}
                                 links={project.links}

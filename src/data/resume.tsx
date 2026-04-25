@@ -237,6 +237,7 @@ export const DATA = {
       description:
         "Developed a data-driven Habit Tracker dashboard during GSSoC 2025. Implemented a cross-platform Data Export feature (JSON/CSV), interactive monthly summary analytics, and comprehensive UI refinements for accessibility and dark mode consistency.",
       technologies: ["React", "Next.js", "TailwindCSS", "Chart.js", "Web APIs"],
+      program: "GSSoC '25",
       links: [
         {
           type: "Source",
@@ -255,6 +256,7 @@ export const DATA = {
       description:
         "Simplified academic resource management for GSSoC 2025. Replaced manual year inputs with optimized dropdown filters, streamlining usability and ensuring seamless integration with legacy backend logic.",
       technologies: ["JavaScript", "HTML/CSS", "UI/UX Optimization"],
+      program: "GSSoC '25",
       links: [
         {
           type: "Source",
@@ -273,6 +275,7 @@ export const DATA = {
       description:
         "Led UI/UX refinements for a digital magazine platform. Optimized the newsletter subscription interface for responsiveness, enhanced navbar contrast for improved accessibility, and implemented interactive hover effects to boost user engagement.",
       technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+      program: "GSSoC '25",
       links: [
         {
           type: "Source",
@@ -291,6 +294,7 @@ export const DATA = {
       description:
         "Redesigned the foundational layout of ReWear's sustainable fashion landing page. Built an accessibility-first footer with multi-column content and integrated newsletter components to enhance community building.",
       technologies: ["React", "TailwindCSS", "UI/UX Design"],
+      program: "GSSoC '25",
       links: [
         {
           type: "Source",

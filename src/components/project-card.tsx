@@ -31,6 +31,7 @@ interface Props {
   description: string;
   dates: string;
   tags: readonly string[];
+  program?: string;
   link?: string;
   image?: string;
   video?: string;
@@ -48,6 +49,7 @@ export function ProjectCard({
   description,
   dates,
   tags,
+  program,
   link,
   image,
   video,
@@ -57,7 +59,7 @@ export function ProjectCard({
   return (
     <div
       className={cn(
-        "flex flex-col h-full border border-border rounded-xl overflow-hidden hover:ring-2 cursor-pointer hover:ring-muted transition-all duration-200",
+        "flex flex-col h-full border border-border rounded-xl overflow-hidden hover:ring-2 cursor-pointer hover:ring-muted transition-all duration-200 group relative",
         className
       )}
     >
@@ -83,6 +85,18 @@ export function ProjectCard({
             <div className="w-full h-48 bg-muted" />
           )}
         </Link>
+        {program && (
+          <div className="absolute top-2 left-2 z-20">
+             <Badge className={cn(
+                "px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider backdrop-blur-md border",
+                program.toLowerCase().includes("gssoc") 
+                  ? "bg-orange-500/10 text-orange-500 border-orange-500/20" 
+                  : "bg-pink-500/10 text-pink-500 border-pink-500/20"
+             )}>
+                {program}
+             </Badge>
+          </div>
+        )}
         {links && links.length > 0 && (
           <div className="absolute top-2 right-2 flex flex-wrap gap-2">
             {links.map((link, idx) => (
