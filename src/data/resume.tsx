@@ -234,16 +234,11 @@ export const DATA = {
       href: "https://github.com/Riti2407/my-habit-tracker",
       dates: "June 2025 - July 2025",
       active: true,
-      description:
-        "Developed a data-driven Habit Tracker dashboard during GSSoC 2025. Implemented a cross-platform Data Export feature (JSON/CSV), interactive monthly summary analytics, and comprehensive UI refinements for accessibility and dark mode consistency.",
+      description: `- Developed a data-driven Habit Tracker dashboard during GSSoC 2025.
+- Implemented a cross-platform Data Export feature (JSON/CSV), interactive monthly summary analytics, and comprehensive UI refinements for accessibility and dark mode consistency.`,
       technologies: ["React", "Next.js", "TailwindCSS", "Chart.js", "Web APIs"],
       program: "GSSoC '25",
       links: [
-        {
-          type: "Codebase",
-          href: "https://github.com/Riti2407/my-habit-tracker",
-          icon: <Icons.github className="size-3" />,
-        },
         {
           type: "Pull Request",
           href: "https://github.com/Riti2407/my-habit-tracker/pulls?q=is%3Apr+author%3Apiyushhvarma",
@@ -258,16 +253,11 @@ export const DATA = {
       href: "https://github.com/supriya46788/Research-Paper-Organizer",
       dates: "July 2025",
       active: true,
-      description:
-        "Simplified academic resource management for GSSoC 2025. Replaced manual year inputs with optimized dropdown filters, streamlining usability and ensuring seamless integration with legacy backend logic.",
+      description: `- Simplified academic resource management for GSSoC 2025.
+- Replaced manual year inputs with optimized dropdown filters, streamlining usability and ensuring seamless integration with legacy backend logic.`,
       technologies: ["JavaScript", "HTML/CSS", "UI/UX Optimization"],
       program: "GSSoC '25",
       links: [
-        {
-          type: "Codebase",
-          href: "https://github.com/supriya46788/Research-Paper-Organizer",
-          icon: <Icons.github className="size-3" />,
-        },
         {
           type: "Pull Request",
           href: "https://github.com/supriya46788/Research-Paper-Organizer/pulls?q=is%3Apr+author%3Apiyushhvarma",
@@ -282,16 +272,11 @@ export const DATA = {
       href: "https://github.com/Kritika75/TheCawnporeMag.github.io",
       dates: "July 2025 - August 2025",
       active: true,
-      description:
-        "Led UI/UX refinements for a digital magazine platform. Optimized the newsletter subscription interface for responsiveness, enhanced navbar contrast for improved accessibility, and implemented interactive hover effects to boost user engagement.",
+      description: `- Led UI/UX refinements for a digital magazine platform.
+- Optimized the newsletter subscription interface for responsiveness, enhanced navbar contrast for improved accessibility, and implemented interactive hover effects to boost user engagement.`,
       technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
       program: "GSSoC '25",
       links: [
-        {
-          type: "Codebase",
-          href: "https://github.com/Kritika75/TheCawnporeMag.github.io",
-          icon: <Icons.github className="size-3" />,
-        },
         {
           type: "Pull Request",
           href: "https://github.com/Kritika75/TheCawnporeMag.github.io/pulls?q=is%3Apr+author%3Apiyushhvarma",
@@ -306,16 +291,11 @@ export const DATA = {
       href: "https://github.com/VAIBHAVBABELE/vaibhavbabele.github.io",
       dates: "August 2025",
       active: true,
-      description:
-        "Resolved accessibility issues in the NITraMITra portal by fixing dark mode visibility bugs. Redefined color variables to ensure WCAG-compliant text contrast and a consistent thematic experience across the UI.",
+      description: `- Resolved accessibility issues in the NITraMITra portal by fixing dark mode visibility bugs.
+- Redefined color variables to ensure WCAG-compliant text contrast and a consistent thematic experience across the UI.`,
       technologies: ["CSS Variables", "Accessibility", "Dark Mode"],
       program: "GSSoC '25",
       links: [
-        {
-          type: "Codebase",
-          href: "https://github.com/VAIBHAVBABELE/vaibhavbabele.github.io",
-          icon: <Icons.github className="size-3" />,
-        },
         {
           type: "Pull Request",
           href: "https://github.com/VAIBHAVBABELE/vaibhavbabele.github.io/pulls?q=is%3Apr+author%3Apiyushhvarma",
@@ -330,16 +310,11 @@ export const DATA = {
       href: "https://github.com/SamXop123/RigCrafter",
       dates: "August 2025",
       active: true,
-      description:
-        "Enhanced the browsing experience for RigCrafter by introducing a global 'Back to Top' navigation system. Implemented custom fade-in animations and smooth-scrolling behaviors using modern JavaScript.",
+      description: `- Enhanced the browsing experience for RigCrafter by introducing a global 'Back to Top' navigation system.
+- Implemented custom fade-in animations and smooth-scrolling behaviors using modern JavaScript.`,
       technologies: ["JavaScript Animations", "UI Interactivity", "Frontend"],
       program: "GSSoC '25",
       links: [
-        {
-          type: "Codebase",
-          href: "https://github.com/SamXop123/RigCrafter",
-          icon: <Icons.github className="size-3" />,
-        },
         {
           type: "Pull Request",
           href: "https://github.com/SamXop123/RigCrafter/pulls?q=is%3Apr+author%3Apiyushhvarma",
@@ -354,16 +329,11 @@ export const DATA = {
       href: "https://github.com/sampadatiwari30/DeshDarshan",
       dates: "July 2025",
       active: true,
-      description:
-        "Refined the visual consistency of Desh Darshan by resolving layout alignment issues and viewport artifacts. Optimized the footer structure and ensured a unified full-viewport design across the platform.",
+      description: `- Refined the visual consistency of Desh Darshan by resolving layout alignment issues and viewport artifacts.
+- Optimized the footer structure and ensured a unified full-viewport design across the platform.`,
       technologies: ["CSS Layouts", "Viewport Optimization", "UI Refinement"],
       program: "GSSoC '25",
       links: [
-        {
-          type: "Codebase",
-          href: "https://github.com/sampadatiwari30/DeshDarshan",
-          icon: <Icons.github className="size-3" />,
-        },
         {
           type: "Pull Request",
           href: "https://github.com/sampadatiwari30/DeshDarshan/pulls?q=is%3Apr+author%3Apiyushhvarma",
@@ -378,16 +348,11 @@ export const DATA = {
       href: "https://github.com/AKing-283/Rewear",
       dates: "June 2025",
       active: true,
-      description:
-        "Redesigned the foundational layout of ReWear's sustainable fashion landing page. Built an accessibility-first footer with multi-column content and integrated newsletter components to enhance community building.",
+      description: `- Redesigned the foundational layout of ReWear's sustainable fashion landing page.
+- Built an accessibility-first footer with multi-column content and integrated newsletter components to enhance community building.`,
       technologies: ["React", "TailwindCSS", "UI/UX Design"],
       program: "GSSoC '25",
       links: [
-        {
-          type: "Codebase",
-          href: "https://github.com/AKing-283/Rewear",
-          icon: <Icons.github className="size-3" />,
-        },
         {
           type: "Pull Request",
           href: "https://github.com/AKing-283/Rewear/pulls?q=is%3Apr+author%3Apiyushhvarma",
@@ -402,16 +367,11 @@ export const DATA = {
       href: "https://github.com/DipanNama/quote-of-the-day",
       dates: "October 2025",
       active: true,
-      description:
-        "Architected keyboard navigation (arrow keys) and parallel API fetching logic (Promise.any) to enhance user experience and performance. Implemented stable fallback systems and timeout handling for robust remote data fetching.",
+      description: `- Architected keyboard navigation (arrow keys) and parallel API fetching logic (Promise.any) to enhance user experience and performance.
+- Implemented stable fallback systems and timeout handling for robust remote data fetching.`,
       technologies: ["JavaScript", "Async/Await", "Accessibility (A11y)", "Performance"],
       program: "Hacktoberfest '25",
       links: [
-        {
-          type: "Codebase",
-          href: "https://github.com/DipanNama/quote-of-the-day",
-          icon: <Icons.github className="size-3" />,
-        },
         {
           type: "Pull Request",
           href: "https://github.com/DipanNama/quote-of-the-day/pulls?q=is%3Apr+author%3Apiyushhvarma",
@@ -426,16 +386,11 @@ export const DATA = {
       href: "https://github.com/idna001/roulette-calculator-react",
       dates: "October 2025",
       active: true,
-      description:
-        "Implemented a scalable React-based theme system using State and Effect hooks. Built persistent user preferences with localStorage and global CSS variables for a seamless dark/light mode transition across the application.",
+      description: `- Implemented a scalable React-based theme system using State and Effect hooks.
+- Built persistent user preferences with localStorage and global CSS variables for a seamless dark/light mode transition across the application.`,
       technologies: ["React", "CSS Variables", "localStorage", "Hooks"],
       program: "Hacktoberfest '25",
       links: [
-        {
-          type: "Codebase",
-          href: "https://github.com/idna001/roulette-calculator-react",
-          icon: <Icons.github className="size-3" />,
-        },
         {
           type: "Pull Request",
           href: "https://github.com/idna001/roulette-calculator-react/pulls?q=is%3Apr+author%3Apiyushhvarma",
@@ -450,16 +405,11 @@ export const DATA = {
       href: "https://github.com/heysaiyad/dev-toolkit",
       dates: "October 2025",
       active: true,
-      description:
-        "Contributed several utility tools including Even/Odd checkers and mathematical calculation modules. Focused on robust input validation, color-coded visual feedback, and theme-aware UI components.",
+      description: `- Contributed several utility tools including Even/Odd checkers and mathematical calculation modules.
+- Focused on robust input validation, color-coded visual feedback, and theme-aware UI components.`,
       technologies: ["HTML", "CSS", "JavaScript", "Logic Optimization"],
       program: "Hacktoberfest '25",
       links: [
-        {
-          type: "Codebase",
-          href: "https://github.com/heysaiyad/dev-toolkit",
-          icon: <Icons.github className="size-3" />,
-        },
         {
           type: "Pull Request",
           href: "https://github.com/heysaiyad/dev-toolkit/pulls?q=is%3Apr+author%3Apiyushhvarma",
@@ -474,16 +424,11 @@ export const DATA = {
       href: "https://github.com/avinash201199/Login-Signup-templates",
       dates: "October 2025",
       active: true,
-      description:
-        "Engineered a scalable theme engine for reusable login/signup templates. Implemented persistent dark mode using localStorage, CSS variables for design tokens, and synchronized scrolling utilities with smooth animations.",
+      description: `- Engineered a scalable theme engine for reusable login/signup templates.
+- Implemented persistent dark mode using localStorage, CSS variables for design tokens, and synchronized scrolling utilities with smooth animations.`,
       technologies: ["CSS Variables", "JavaScript", "Local Storage", "UI UX"],
       program: "Hacktoberfest '25",
       links: [
-        {
-          type: "Codebase",
-          href: "https://github.com/avinash201199/Login-Signup-templates",
-          icon: <Icons.github className="size-3" />,
-        },
         {
           type: "Pull Request",
           href: "https://github.com/avinash201199/Login-Signup-templates/pulls?q=is%3Apr+author%3Apiyushhvarma",
@@ -498,16 +443,11 @@ export const DATA = {
       href: "https://github.com/avinash201199/Hacktoberfest2025",
       dates: "October 2025",
       active: true,
-      description:
-        "Enhanced the official contribution hub with modern UI aesthetics. Implemented a gradient-based design language, glassmorphism sidebars, and an accessibility-focused dark/light theme system in the primary navigation.",
+      description: `- Enhanced the official contribution hub with modern UI aesthetics.
+- Implemented a gradient-based design language, glassmorphism sidebars, and an accessibility-focused dark/light theme system in the primary navigation.`,
       technologies: ["Glassmorphism", "CSS Gradients", "Responsive Design"],
       program: "Hacktoberfest '25",
       links: [
-        {
-          type: "Codebase",
-          href: "https://github.com/avinash201199/Hacktoberfest2025",
-          icon: <Icons.github className="size-3" />,
-        },
         {
           type: "Pull Request",
           href: "https://github.com/avinash201199/Hacktoberfest2025/pulls?q=is%3Apr+author%3Apiyushhvarma",
@@ -522,16 +462,11 @@ export const DATA = {
       href: "https://github.com/noodles-sed/hacktober-base",
       dates: "October 2025",
       active: true,
-      description:
-        "Improved cross-page navigation by implementing a smart 'Scroll to Top' component. Features include a dynamic scroll-depth threshold activation, fade-in/out transitions, and smooth scrolling optimization.",
+      description: `- Improved cross-page navigation by implementing a smart 'Scroll to Top' component.
+- Features include a dynamic scroll-depth threshold activation, fade-in/out transitions, and smooth scrolling optimization.`,
       technologies: ["JavaScript", "TailwindCSS", "Animation"],
       program: "Hacktoberfest '25",
       links: [
-        {
-          type: "Codebase",
-          href: "https://github.com/noodles-sed/hacktober-base",
-          icon: <Icons.github className="size-3" />,
-        },
         {
           type: "Pull Request",
           href: "https://github.com/noodles-sed/hacktober-base/pulls?q=is%3Apr+author%3Apiyushhvarma",

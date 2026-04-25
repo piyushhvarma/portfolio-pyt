@@ -85,27 +85,6 @@ export function ProjectCard({
             <div className="w-full aspect-video bg-muted" />
           )}
         </Link>
-        {links && links.length > 0 && (
-          <div className="absolute top-2 right-2 flex flex-wrap gap-1.5">
-            {links.map((link, idx) => (
-              <Link
-                href={link.href}
-                key={idx}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <Badge
-                  className="flex items-center gap-1 text-[10px] sm:text-xs bg-black/80 hover:bg-black text-white border-white/10 backdrop-blur-md px-2 py-0.5"
-                  variant="default"
-                >
-                  {link.icon}
-                  {link.type}
-                </Badge>
-              </Link>
-            ))}
-          </div>
-        )}
       </div>
       <div className="p-6 flex flex-col gap-3 flex-1">
         <div className="flex items-start justify-between gap-2">
@@ -126,6 +105,29 @@ export function ProjectCard({
         <div className="text-xs flex-1 prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
           <Markdown>{description}</Markdown>
         </div>
+        
+        {links && links.length > 0 && (
+          <div className="flex flex-wrap gap-2">
+            {links.map((link, idx) => (
+              <Link
+                href={link.href}
+                key={idx}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Badge
+                  className="flex items-center gap-1 text-[10px] sm:text-xs bg-black/80 hover:bg-black text-white border-white/10 backdrop-blur-md px-2 py-1"
+                  variant="default"
+                >
+                  {link.icon}
+                  {link.type}
+                </Badge>
+              </Link>
+            ))}
+          </div>
+        )}
+
         {tags && tags.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-auto">
             {tags.map((tag) => (
