@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon, GitBranch, Github, FileCode2, Sparkles, BrainCircuit, Eye, LayoutTemplate, ShoppingCart, Layout, Code2 } from "lucide-react";
+import { HomeIcon, NotebookIcon, GitBranch, Github, FileCode2, Sparkles, BrainCircuit, Eye, LayoutTemplate, ShoppingCart, Layout, Code2, GitPullRequest } from "lucide-react";
 import { ReactLight } from "@/components/ui/svgs/reactLight";
 import { NextjsIconDark } from "@/components/ui/svgs/nextjsIconDark";
 import { Typescript } from "@/components/ui/svgs/typescript";
@@ -240,9 +240,14 @@ export const DATA = {
       program: "GSSoC '25",
       links: [
         {
-          type: "Source",
+          type: "Codebase",
           href: "https://github.com/Riti2407/my-habit-tracker",
           icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Pull Request",
+          href: "https://github.com/Riti2407/my-habit-tracker/pulls?q=is%3Apr+author%3Apiyushhvarma",
+          icon: <GitPullRequest className="size-3" />,
         },
       ],
       image: "",
@@ -259,9 +264,14 @@ export const DATA = {
       program: "GSSoC '25",
       links: [
         {
-          type: "Source",
+          type: "Codebase",
           href: "https://github.com/supriya46788/Research-Paper-Organizer",
           icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Pull Request",
+          href: "https://github.com/supriya46788/Research-Paper-Organizer/pulls?q=is%3Apr+author%3Apiyushhvarma",
+          icon: <GitPullRequest className="size-3" />,
         },
       ],
       image: "",
@@ -278,9 +288,14 @@ export const DATA = {
       program: "GSSoC '25",
       links: [
         {
-          type: "Source",
+          type: "Codebase",
           href: "https://github.com/Kritika75/TheCawnporeMag.github.io",
           icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Pull Request",
+          href: "https://github.com/Kritika75/TheCawnporeMag.github.io/pulls?q=is%3Apr+author%3Apiyushhvarma",
+          icon: <GitPullRequest className="size-3" />,
         },
       ],
       image: "",
@@ -297,9 +312,14 @@ export const DATA = {
       program: "GSSoC '25",
       links: [
         {
-          type: "Source",
+          type: "Codebase",
           href: "https://github.com/VAIBHAVBABELE/vaibhavbabele.github.io",
           icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Pull Request",
+          href: "https://github.com/VAIBHAVBABELE/vaibhavbabele.github.io/pulls?q=is%3Apr+author%3Apiyushhvarma",
+          icon: <GitPullRequest className="size-3" />,
         },
       ],
       image: "",
@@ -316,9 +336,14 @@ export const DATA = {
       program: "GSSoC '25",
       links: [
         {
-          type: "Source",
+          type: "Codebase",
           href: "https://github.com/SamXop123/RigCrafter",
           icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Pull Request",
+          href: "https://github.com/SamXop123/RigCrafter/pulls?q=is%3Apr+author%3Apiyushhvarma",
+          icon: <GitPullRequest className="size-3" />,
         },
       ],
       image: "",
@@ -335,9 +360,14 @@ export const DATA = {
       program: "GSSoC '25",
       links: [
         {
-          type: "Source",
+          type: "Codebase",
           href: "https://github.com/sampadatiwari30/DeshDarshan",
           icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Pull Request",
+          href: "https://github.com/sampadatiwari30/DeshDarshan/pulls?q=is%3Apr+author%3Apiyushhvarma",
+          icon: <GitPullRequest className="size-3" />,
         },
       ],
       image: "",
@@ -354,9 +384,14 @@ export const DATA = {
       program: "GSSoC '25",
       links: [
         {
-          type: "Source",
+          type: "Codebase",
           href: "https://github.com/AKing-283/Rewear",
           icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Pull Request",
+          href: "https://github.com/AKing-283/Rewear/pulls?q=is%3Apr+author%3Apiyushhvarma",
+          icon: <GitPullRequest className="size-3" />,
         },
       ],
       image: "",
@@ -373,9 +408,14 @@ export const DATA = {
       program: "Hacktoberfest '25",
       links: [
         {
-          type: "Source",
+          type: "Codebase",
           href: "https://github.com/DipanNama/quote-of-the-day",
           icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Pull Request",
+          href: "https://github.com/DipanNama/quote-of-the-day/pulls?q=is%3Apr+author%3Apiyushhvarma",
+          icon: <GitPullRequest className="size-3" />,
         },
       ],
       image: "",
@@ -392,9 +432,14 @@ export const DATA = {
       program: "Hacktoberfest '25",
       links: [
         {
-          type: "Source",
+          type: "Codebase",
           href: "https://github.com/idna001/roulette-calculator-react",
           icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Pull Request",
+          href: "https://github.com/idna001/roulette-calculator-react/pulls?q=is%3Apr+author%3Apiyushhvarma",
+          icon: <GitPullRequest className="size-3" />,
         },
       ],
       image: "",
@@ -411,9 +456,14 @@ export const DATA = {
       program: "Hacktoberfest '25",
       links: [
         {
-          type: "Source",
+          type: "Codebase",
           href: "https://github.com/heysaiyad/dev-toolkit",
           icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Pull Request",
+          href: "https://github.com/heysaiyad/dev-toolkit/pulls?q=is%3Apr+author%3Apiyushhvarma",
+          icon: <GitPullRequest className="size-3" />,
         },
       ],
       image: "",
@@ -430,9 +480,14 @@ export const DATA = {
       program: "Hacktoberfest '25",
       links: [
         {
-          type: "Source",
+          type: "Codebase",
           href: "https://github.com/avinash201199/Login-Signup-templates",
           icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Pull Request",
+          href: "https://github.com/avinash201199/Login-Signup-templates/pulls?q=is%3Apr+author%3Apiyushhvarma",
+          icon: <GitPullRequest className="size-3" />,
         },
       ],
       image: "",
@@ -449,9 +504,14 @@ export const DATA = {
       program: "Hacktoberfest '25",
       links: [
         {
-          type: "Source",
+          type: "Codebase",
           href: "https://github.com/avinash201199/Hacktoberfest2025",
           icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Pull Request",
+          href: "https://github.com/avinash201199/Hacktoberfest2025/pulls?q=is%3Apr+author%3Apiyushhvarma",
+          icon: <GitPullRequest className="size-3" />,
         },
       ],
       image: "",
@@ -468,9 +528,14 @@ export const DATA = {
       program: "Hacktoberfest '25",
       links: [
         {
-          type: "Source",
+          type: "Codebase",
           href: "https://github.com/noodles-sed/hacktober-base",
           icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Pull Request",
+          href: "https://github.com/noodles-sed/hacktober-base/pulls?q=is%3Apr+author%3Apiyushhvarma",
+          icon: <GitPullRequest className="size-3" />,
         },
       ],
       image: "",
