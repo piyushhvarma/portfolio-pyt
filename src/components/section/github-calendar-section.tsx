@@ -44,28 +44,30 @@ export default function GithubCalendarSection() {
                     fill: hsl(0 0% 90%);
                 }
             `}</style>
-            {/* Kept left-aligned with w-full to perfectly fit the native bounds gracefully without scrollbars */}
-            <div className="w-full mt-4 group relative z-10">
+            <div className="w-full mt-6 mb-8 group relative z-10">
                 {mounted ? (
-                    <div className="w-full flex justify-start pb-2 [&_svg]:!max-w-full [&_svg]:!w-full [&_svg]:!h-auto">
-                        <GitHubCalendar 
-                            username="piyushhvarma"
-                            blockSize={16}
-                            blockMargin={4}
-                            blockRadius={3}
-                            colorScheme={(resolvedTheme === 'dark' || theme === 'dark') ? 'dark' : 'light'}
-                            fontSize={16}
-                            // @ts-ignore
-                            hideScrollbar={true}
-                            tooltips={{
-                                activity: {
-                                    // @ts-ignore
-                                    text: (activity) => `${activity.count} contributions on ${parseDate(activity.date)}`,
-                                    placement: 'top',
-                                    withArrow: true,
-                                },
-                            }}
-                        />
+                    // Applying a literal CSS scale transform to physically zoom in on the component by 20% on desktop while maintaining native left alignment and SVG boundaries!
+                    <div className="w-full flex justify-start pb-2">
+                        <div className="origin-left transform scale-100 sm:scale-[1.10] md:scale-[1.20] transition-all duration-300 w-full [&_svg]:!max-w-full [&_svg]:!w-full [&_svg]:!h-auto">
+                            <GitHubCalendar 
+                                username="piyushhvarma"
+                                blockSize={16}
+                                blockMargin={4}
+                                blockRadius={3}
+                                colorScheme={(resolvedTheme === 'dark' || theme === 'dark') ? 'dark' : 'light'}
+                                fontSize={16}
+                                // @ts-ignore
+                                hideScrollbar={true}
+                                tooltips={{
+                                    activity: {
+                                        // @ts-ignore
+                                        text: (activity) => `${activity.count} contributions on ${parseDate(activity.date)}`,
+                                        placement: 'top',
+                                        withArrow: true,
+                                    },
+                                }}
+                            />
+                        </div>
                     </div>
                 ) : (
                     <div className="h-[120px] w-full flex items-center justify-start text-muted-foreground text-sm">
