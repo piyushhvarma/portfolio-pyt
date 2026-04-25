@@ -305,6 +305,63 @@ export const DATA = {
       image: "",
       video: "",
     },
+    {
+      title: "Quote of the Day",
+      href: "https://github.com/DipanNama/quote-of-the-day",
+      dates: "October 2025",
+      active: true,
+      description:
+        "Architected keyboard navigation (arrow keys) and parallel API fetching logic (Promise.any) to enhance user experience and performance. Implemented stable fallback systems and timeout handling for robust remote data fetching.",
+      technologies: ["JavaScript", "Async/Await", "Accessibility (A11y)", "Performance"],
+      program: "Hacktoberfest '25",
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/DipanNama/quote-of-the-day",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Roulette Calculator React",
+      href: "https://github.com/idna001/roulette-calculator-react",
+      dates: "October 2025",
+      active: true,
+      description:
+        "Implemented a scalable React-based theme system using State and Effect hooks. Built persistent user preferences with localStorage and global CSS variables for a seamless dark/light mode transition across the application.",
+      technologies: ["React", "CSS Variables", "localStorage", "Hooks"],
+      program: "Hacktoberfest '25",
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/idna001/roulette-calculator-react",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Dev-Toolkit",
+      href: "https://github.com/heysaiyad/dev-toolkit",
+      dates: "October 2025",
+      active: true,
+      description:
+        "Contributed several utility tools including Even/Odd checkers and mathematical calculation modules. Focused on robust input validation, color-coded visual feedback, and theme-aware UI components.",
+      technologies: ["HTML", "CSS", "JavaScript", "Logic Optimization"],
+      program: "Hacktoberfest '25",
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/heysaiyad/dev-toolkit",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
   ],
   hackathons: [
     {
