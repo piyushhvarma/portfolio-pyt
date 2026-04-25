@@ -12,14 +12,14 @@ function ProjectImage({ src, alt }: { src: string; alt: string }) {
   const [imageError, setImageError] = useState(false);
 
   if (!src || imageError) {
-    return <div className="w-full h-48 bg-muted" />;
+    return <div className="w-full aspect-video bg-muted" />;
   }
 
   return (
     <img
       src={src}
       alt={alt}
-      className="w-full h-48 object-cover"
+      className="w-full aspect-video object-cover object-top"
       onError={() => setImageError(true)}
     />
   );
@@ -77,16 +77,16 @@ export function ProjectCard({
               loop
               muted
               playsInline
-              className="w-full h-48 object-cover"
+              className="w-full aspect-video object-cover object-top"
             />
           ) : image ? (
             <ProjectImage src={image} alt={title} />
           ) : (
-            <div className="w-full h-48 bg-muted" />
+            <div className="w-full aspect-video bg-muted" />
           )}
         </Link>
         {links && links.length > 0 && (
-          <div className="absolute top-2 right-2 flex flex-wrap gap-2">
+          <div className="absolute top-2 right-2 flex flex-wrap gap-1.5">
             {links.map((link, idx) => (
               <Link
                 href={link.href}
@@ -96,7 +96,7 @@ export function ProjectCard({
                 onClick={(e) => e.stopPropagation()}
               >
                 <Badge
-                  className="flex items-center gap-1.5 text-xs bg-black text-white hover:bg-black/90"
+                  className="flex items-center gap-1 text-[10px] sm:text-xs bg-black/80 hover:bg-black text-white border-white/10 backdrop-blur-md px-2 py-0.5"
                   variant="default"
                 >
                   {link.icon}
