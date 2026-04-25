@@ -89,7 +89,11 @@ export function ProjectCard({
       <div className="p-6 flex flex-col gap-3 flex-1">
         <div className="flex items-start justify-between gap-2">
           <div className="flex flex-col gap-1">
-            <h3 className="font-semibold">{title}</h3>
+            <Link href={href || "#"} target="_blank" rel="noopener noreferrer">
+              <h3 className="font-semibold hover:underline decoration-muted-foreground/30 underline-offset-4">
+                {title}
+              </h3>
+            </Link>
             <time className="text-xs text-muted-foreground">{dates}</time>
           </div>
           <Link
