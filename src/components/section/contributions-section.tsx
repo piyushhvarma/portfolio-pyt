@@ -80,7 +80,7 @@ export default function ContributionsSection() {
                                         <LogoImage src="/gssoc-white.png" srcDark="/gssoc-dark.webp" alt="GSSoC Logo" />
                                         <div className="flex flex-col items-start gap-0.5">
                                             <span className="text-xl font-bold tracking-tight text-zinc-900 dark:bg-linear-to-br dark:from-white dark:to-white/60 dark:bg-clip-text dark:text-transparent">GirlScript Summer of Code</span>
-                                            <span className="text-xs text-orange-500/80 font-bold uppercase tracking-[0.2em]">{gssocProjects.length} Repositories Merged</span>
+                                            <span className="text-[10px] text-orange-500/80 font-bold uppercase tracking-[0.3em] font-mono">{gssocProjects.length} Repositories Merged</span>
                                         </div>
                                     </div>
                                     <ChevronDown className="h-5 w-5 text-muted-foreground transition-transform duration-500 ease-in-out group-data-[state=open]:rotate-180" />
@@ -105,7 +105,7 @@ export default function ContributionsSection() {
                                         <LogoImage src="/hacktoberfest-animation.gif" alt="Hacktoberfest Logo" />
                                         <div className="flex flex-col items-start gap-0.5">
                                             <span className="text-xl font-bold tracking-tight text-zinc-900 dark:bg-linear-to-br dark:from-white dark:to-white/60 dark:bg-clip-text dark:text-transparent">Hacktoberfest 2025</span>
-                                            <span className="text-xs text-pink-500/80 font-bold uppercase tracking-[0.2em]">{hacktoberProjects.length} Repositories Merged</span>
+                                            <span className="text-[10px] text-purple-500/80 font-bold uppercase tracking-[0.3em] font-mono">{hacktoberProjects.length} Repositories Merged</span>
                                         </div>
                                     </div>
                                     <ChevronDown className="h-5 w-5 text-muted-foreground transition-transform duration-500 ease-in-out group-data-[state=open]:rotate-180" />
