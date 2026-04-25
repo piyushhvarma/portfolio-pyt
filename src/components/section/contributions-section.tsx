@@ -79,7 +79,7 @@ export default function ContributionsSection() {
                                     <div className="flex items-center gap-4">
                                         <LogoImage src="/gssoc-white.png" srcDark="/gssoc-dark.webp" alt="GSSoC Logo" />
                                         <div className="flex flex-col items-start gap-0.5">
-                                            <span className="text-xl font-bold tracking-tight bg-linear-to-br from-white to-white/60 bg-clip-text text-transparent">GirlScript Summer of Code</span>
+                                            <span className="text-xl font-bold tracking-tight text-zinc-900 dark:bg-linear-to-br dark:from-white dark:to-white/60 dark:bg-clip-text dark:text-transparent">GirlScript Summer of Code</span>
                                             <span className="text-xs text-orange-500/80 font-bold uppercase tracking-[0.2em]">{gssocProjects.length} Repositories Merged</span>
                                         </div>
                                     </div>
@@ -104,7 +104,7 @@ export default function ContributionsSection() {
                                     <div className="flex items-center gap-4">
                                         <LogoImage src="/hacktoberfest-animation.gif" alt="Hacktoberfest Logo" />
                                         <div className="flex flex-col items-start gap-0.5">
-                                            <span className="text-xl font-bold tracking-tight bg-linear-to-br from-white to-white/60 bg-clip-text text-transparent">Hacktoberfest 2025</span>
+                                            <span className="text-xl font-bold tracking-tight text-zinc-900 dark:bg-linear-to-br dark:from-white dark:to-white/60 dark:bg-clip-text dark:text-transparent">Hacktoberfest 2025</span>
                                             <span className="text-xs text-pink-500/80 font-bold uppercase tracking-[0.2em]">{hacktoberProjects.length} Repositories Merged</span>
                                         </div>
                                     </div>
