@@ -1,6 +1,6 @@
 "use client";
 
-import GitHubCalendar from "react-github-calendar";
+import { GitHubCalendar } from "react-github-calendar";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
