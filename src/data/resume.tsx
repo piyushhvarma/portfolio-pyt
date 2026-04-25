@@ -287,6 +287,63 @@ export const DATA = {
       video: "",
     },
     {
+      title: "NITraMITra",
+      href: "https://github.com/VAIBHAVBABELE/vaibhavbabele.github.io",
+      dates: "August 2025",
+      active: true,
+      description:
+        "Resolved accessibility issues in the NITraMITra portal by fixing dark mode visibility bugs. Redefined color variables to ensure WCAG-compliant text contrast and a consistent thematic experience across the UI.",
+      technologies: ["CSS Variables", "Accessibility", "Dark Mode"],
+      program: "GSSoC '25",
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/VAIBHAVBABELE/vaibhavbabele.github.io",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "RigCrafter",
+      href: "https://github.com/SamXop123/RigCrafter",
+      dates: "August 2025",
+      active: true,
+      description:
+        "Enhanced the browsing experience for RigCrafter by introducing a global 'Back to Top' navigation system. Implemented custom fade-in animations and smooth-scrolling behaviors using modern JavaScript.",
+      technologies: ["JavaScript Animations", "UI Interactivity", "Frontend"],
+      program: "GSSoC '25",
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/SamXop123/RigCrafter",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Desh Darshan",
+      href: "https://github.com/sampadatiwari30/DeshDarshan",
+      dates: "July 2025",
+      active: true,
+      description:
+        "Refined the visual consistency of Desh Darshan by resolving layout alignment issues and viewport artifacts. Optimized the footer structure and ensured a unified full-viewport design across the platform.",
+      technologies: ["CSS Layouts", "Viewport Optimization", "UI Refinement"],
+      program: "GSSoC '25",
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/sampadatiwari30/DeshDarshan",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
       title: "ReWear",
       href: "https://github.com/AKing-283/Rewear",
       dates: "June 2025",

@@ -7,7 +7,7 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Flame, Ghost } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const BLUR_FADE_DELAY = 0.04;
@@ -39,22 +39,22 @@ export default function ContributionsSection() {
                 <div className="w-full max-w-[800px] mx-auto">
                     <Accordion type="multiple" defaultValue={["gssoc"]} className="grid gap-6">
                         {/* GSSoC Section */}
-                        <AccordionItem value="gssoc" className="border border-border rounded-2xl px-4 py-2 bg-zinc-900/5 dark:bg-white/5 backdrop-blur-sm overflow-hidden">
+                        <AccordionItem value="gssoc" className="border border-white/10 rounded-3xl px-4 py-2 bg-white/5 dark:bg-white/[0.03] backdrop-blur-xl shadow-2xl shadow-black/20 overflow-hidden transition-all hover:bg-white/10 dark:hover:bg-white/[0.05]">
                             <AccordionTrigger className="hover:no-underline py-4 group">
                                 <div className="flex items-center justify-between w-full pr-4">
-                                    <div className="flex items-center gap-3">
-                                        <div className="size-10 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center">
-                                            <span className="text-orange-500 font-bold text-xs">GS</span>
+                                    <div className="flex items-center gap-4">
+                                        <div className="size-12 rounded-2xl bg-orange-500/20 border border-orange-500/30 flex items-center justify-center shadow-inner">
+                                            <Flame className="size-6 text-orange-500 fill-orange-500/20" />
                                         </div>
                                         <div className="flex flex-col items-start gap-0.5">
-                                            <span className="text-lg font-bold tracking-tight">GirlScript Summer of Code</span>
-                                            <span className="text-xs text-muted-foreground font-medium uppercase tracking-widest">{gssocProjects.length} Projects Merged</span>
+                                            <span className="text-xl font-bold tracking-tight bg-linear-to-br from-white to-white/60 bg-clip-text text-transparent">GirlScript Summer of Code</span>
+                                            <span className="text-xs text-orange-500/80 font-bold uppercase tracking-[0.2em]">{gssocProjects.length} Repositories Merged</span>
                                         </div>
                                     </div>
-                                    <ChevronDown className="h-5 w-5 text-muted-foreground transition-transform duration-300 group-data-[state=open]:rotate-180" />
+                                    <ChevronDown className="h-5 w-5 text-muted-foreground transition-transform duration-500 ease-in-out group-data-[state=open]:rotate-180" />
                                 </div>
                             </AccordionTrigger>
-                            <AccordionContent className="pt-4 pb-6">
+                            <AccordionContent className="pt-4 pb-8">
                                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 auto-rows-fr">
                                     {gssocProjects.map((project, id) => (
                                         <BlurFade key={project.title} delay={BLUR_FADE_DELAY * 2 + id * 0.05} className="h-full">
@@ -66,22 +66,22 @@ export default function ContributionsSection() {
                         </AccordionItem>
 
                         {/* Hacktoberfest Section */}
-                        <AccordionItem value="hacktoberfest" className="border border-border rounded-2xl px-4 py-2 bg-zinc-900/5 dark:bg-white/5 backdrop-blur-sm overflow-hidden">
+                        <AccordionItem value="hacktoberfest" className="border border-white/10 rounded-3xl px-4 py-2 bg-white/5 dark:bg-white/[0.03] backdrop-blur-xl shadow-2xl shadow-black/20 overflow-hidden transition-all hover:bg-white/10 dark:hover:bg-white/[0.05]">
                             <AccordionTrigger className="hover:no-underline py-4 group">
                                 <div className="flex items-center justify-between w-full pr-4">
-                                    <div className="flex items-center gap-3">
-                                        <div className="size-10 rounded-xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center">
-                                            <span className="text-pink-500 font-bold text-xs">HT</span>
+                                    <div className="flex items-center gap-4">
+                                        <div className="size-12 rounded-2xl bg-pink-500/20 border border-pink-500/30 flex items-center justify-center shadow-inner">
+                                            <Ghost className="size-6 text-pink-500 fill-pink-500/20" />
                                         </div>
                                         <div className="flex flex-col items-start gap-0.5">
-                                            <span className="text-lg font-bold tracking-tight">Hacktoberfest 2025</span>
-                                            <span className="text-xs text-muted-foreground font-medium uppercase tracking-widest">{hacktoberProjects.length} Projects Merged</span>
+                                            <span className="text-xl font-bold tracking-tight bg-linear-to-br from-white to-white/60 bg-clip-text text-transparent">Hacktoberfest 2025</span>
+                                            <span className="text-xs text-pink-500/80 font-bold uppercase tracking-[0.2em]">{hacktoberProjects.length} Repositories Merged</span>
                                         </div>
                                     </div>
-                                    <ChevronDown className="h-5 w-5 text-muted-foreground transition-transform duration-300 group-data-[state=open]:rotate-180" />
+                                    <ChevronDown className="h-5 w-5 text-muted-foreground transition-transform duration-500 ease-in-out group-data-[state=open]:rotate-180" />
                                 </div>
                             </AccordionTrigger>
-                            <AccordionContent className="pt-4 pb-6">
+                            <AccordionContent className="pt-4 pb-8">
                                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 auto-rows-fr">
                                     {hacktoberProjects.map((project, id) => (
                                         <BlurFade key={project.title} delay={BLUR_FADE_DELAY * 2 + id * 0.05} className="h-full">
