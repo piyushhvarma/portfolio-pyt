@@ -80,6 +80,14 @@ export default function Page() {
         </BlurFade>
       </section>
 
+      <section id="activity">
+        <div className="flex min-h-0 flex-col gap-y-4 mb-4">
+          <BlurFade delay={BLUR_FADE_DELAY * 3.4}>
+            <GithubCalendarSection />
+          </BlurFade>
+        </div>
+      </section>
+
       <section id="projects">
         <div className="flex min-h-0 flex-col gap-y-4 mb-4">
           <BlurFade delay={BLUR_FADE_DELAY * 3.5}>
@@ -92,14 +100,6 @@ export default function Page() {
         <div className="flex min-h-0 flex-col gap-y-4 mb-4">
           <BlurFade delay={BLUR_FADE_DELAY * 3.8}>
             <ContributionsSection />
-          </BlurFade>
-        </div>
-      </section>
-
-      <section id="activity">
-        <div className="flex min-h-0 flex-col gap-y-4 mb-4">
-          <BlurFade delay={BLUR_FADE_DELAY * 3.9}>
-            <GithubCalendarSection />
           </BlurFade>
         </div>
       </section>
