@@ -20,7 +20,7 @@ export const DATA = {
   description:
     "Software Engineer and product builder passionate about AI and problem-solving. I love creating things that people actually use, sharing insights online, and learning openly along the journey.",
   summary:
-    "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), interned at big tech companies in Silicon Valley, and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
+    "I am a Computer Science student at Manipal University Jaipur with a strong focus on AI/ML and building high-performance web products. Recently, I completed GSSoC 2025 as an Open Source Contributor, where I delivered 9 impactful pull requests across 8 different repositories. I thrive on bridging the gap between complex backend logic and pixel-perfect, accessible user interfaces.",
   avatarUrl: "/me.png",
   skills: [
     { name: "React", icon: ReactLight },
@@ -85,7 +85,7 @@ export const DATA = {
 
   work: [
     {
-      company: "Girls script summer of code",
+      company: "GirlScript Summer of Code (GSSoC)",
       href: "https://gssoc.girlscript.org/",
       badges: [],
       location: "Remote",
@@ -95,7 +95,7 @@ export const DATA = {
       start: "May 2025",
       end: "Aug 2025",
       description:
-        "Implemented the Bitcoin discreet log contract (DLC) protocol specifications as an open source Typescript SDK. Dockerized all microservices and setup production kubernetes cluster. Architected a data lake using AWS S3 and Athena for historical backtesting of bitcoin trading strategies. Built a mobile app using react native and typescript.",
+        "Contributed to 8+ open-source repositories with 9+ impactful pull requests focused on UI/UX, performance, and accessibility. Engineered key features including a habit-tracking analytics dashboard with data export (CSV/JSON) capabilities, interactive summary pages, and animated UI elements. Optimized broad-reach platforms for responsive design and WCAG standards, ensuring consistent user experiences across diverse frontend architectures.",
     },
     {
       company: "Hacktoberfest",
@@ -226,6 +226,80 @@ export const DATA = {
       ],
       image: "",
       video: "https://cdn.llm.report/openai-demo.mp4",
+    },
+  ],
+  contributions: [
+    {
+      title: "My Habit Tracker",
+      href: "https://github.com/Riti2407/my-habit-tracker",
+      dates: "June 2025 - July 2025",
+      active: true,
+      description:
+        "Developed a data-driven Habit Tracker dashboard during GSSoC 2025. Implemented a cross-platform Data Export feature (JSON/CSV), interactive monthly summary analytics, and comprehensive UI refinements for accessibility and dark mode consistency.",
+      technologies: ["React", "Next.js", "TailwindCSS", "Chart.js", "Web APIs"],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/Riti2407/my-habit-tracker",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Research Paper Organizer",
+      href: "https://github.com/supriya46788/Research-Paper-Organizer",
+      dates: "July 2025",
+      active: true,
+      description:
+        "Simplified academic resource management for GSSoC 2025. Replaced manual year inputs with optimized dropdown filters, streamlining usability and ensuring seamless integration with legacy backend logic.",
+      technologies: ["JavaScript", "HTML/CSS", "UI/UX Optimization"],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/supriya46788/Research-Paper-Organizer",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "The Cawnpore Mag",
+      href: "https://github.com/Kritika75/TheCawnporeMag.github.io",
+      dates: "July 2025 - August 2025",
+      active: true,
+      description:
+        "Led UI/UX refinements for a digital magazine platform. Optimized the newsletter subscription interface for responsiveness, enhanced navbar contrast for improved accessibility, and implemented interactive hover effects to boost user engagement.",
+      technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/Kritika75/TheCawnporeMag.github.io",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "ReWear",
+      href: "https://github.com/AKing-283/Rewear",
+      dates: "June 2025",
+      active: true,
+      description:
+        "Redesigned the foundational layout of ReWear's sustainable fashion landing page. Built an accessibility-first footer with multi-column content and integrated newsletter components to enhance community building.",
+      technologies: ["React", "TailwindCSS", "UI/UX Design"],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/AKing-283/Rewear",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
     },
   ],
   hackathons: [
