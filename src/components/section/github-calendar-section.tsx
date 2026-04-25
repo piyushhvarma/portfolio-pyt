@@ -3,7 +3,7 @@
 import { GitHubCalendar } from "react-github-calendar";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import "react-activity-calendar/build/tooltips.css";
+import "react-activity-calendar/tooltips.css";
 
 export default function GithubCalendarSection() {
     const { theme, resolvedTheme } = useTheme();
