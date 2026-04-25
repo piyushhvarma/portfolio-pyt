@@ -95,7 +95,7 @@ export const DATA = {
       start: "May 2025",
       end: "Aug 2025",
       description:
-        "Contributed to 8+ open-source repositories with 9+ impactful pull requests focused on UI/UX, performance, and accessibility. Engineered key features including a habit-tracking analytics dashboard with data export (CSV/JSON) capabilities, interactive summary pages, and animated UI elements. Optimized broad-reach platforms for responsive design and WCAG standards, ensuring consistent user experiences across diverse frontend architectures.",
+        "- Contributed to **8+ repositories** with **9+ PRs** focused on UI/UX and performance.\n- Engineered analytics dashboards with **CSV/JSON export** and habit streak tracking.\n- Optimized responsive layouts and accessibility (WCAG) for broad-reach platforms.",
     },
     {
       company: "Hacktoberfest",
@@ -107,7 +107,7 @@ export const DATA = {
       start: "Oct 2025",
       end: "Nov 2025",
       description:
-        "Successfully contributed to 6+ open-source repositories with 13+ merged pull requests during Hacktoberfest 2025. Focused on enhancing UI/UX interactivity, implementing persistent theme engines, and optimizing web performance. Engineered specialized components such as glassmorphism sidebars, smooth-scroll utilities, and interactive developer tools while adhering to accessibility-first design standards.",
+        "- Merged **13+ PRs** across **6 projects**, focusing on themes and performance.\n- Specialized in glassmorphism UI, smooth-scroll utilities, and math productivity tools.\n- Improved app accessibility and implemented parallel API fetching for speed.",
     },
   ],
   education: [
