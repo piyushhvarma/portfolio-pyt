@@ -7,10 +7,43 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion";
-import { ChevronDown, Flame, Ghost } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 const BLUR_FADE_DELAY = 0.04;
+
+function LogoImage({ src, alt, srcDark }: { src: string; alt: string; srcDark?: string }) {
+    const [imageError, setImageError] = useState(false);
+
+    if (!src || imageError) {
+        return (
+            <div className="size-10 md:size-12 p-1 border rounded-2xl shadow ring-1 ring-border bg-muted flex-none" />
+        );
+    }
+
+    return (
+        <div className="relative size-10 md:size-12 flex-none">
+            <img
+                src={src}
+                alt={alt}
+                className={cn(
+                    "size-full p-1 border rounded-2xl shadow ring-1 ring-border overflow-hidden object-contain bg-white/5",
+                    srcDark ? "dark:hidden" : ""
+                )}
+                onError={() => setImageError(true)}
+            />
+            {srcDark && (
+                <img
+                    src={srcDark}
+                    alt={alt}
+                    className="size-full p-1 border rounded-2xl shadow ring-1 ring-border overflow-hidden object-contain bg-white/5 hidden dark:block"
+                    onError={() => setImageError(true)}
+                />
+            )}
+        </div>
+    );
+}
 
 export default function ContributionsSection() {
     const gssocProjects = DATA.contributions.filter(p => p.program?.includes("GSSoC"));
@@ -43,9 +76,7 @@ export default function ContributionsSection() {
                             <AccordionTrigger className="hover:no-underline py-4 group">
                                 <div className="flex items-center justify-between w-full pr-4">
                                     <div className="flex items-center gap-4">
-                                        <div className="size-12 rounded-2xl bg-orange-500/20 border border-orange-500/30 flex items-center justify-center shadow-inner">
-                                            <Flame className="size-6 text-orange-500 fill-orange-500/20" />
-                                        </div>
+                                        <LogoImage src="/gssoc-white.png" srcDark="/gssoc-dark.webp" alt="GSSoC Logo" />
                                         <div className="flex flex-col items-start gap-0.5">
                                             <span className="text-xl font-bold tracking-tight bg-linear-to-br from-white to-white/60 bg-clip-text text-transparent">GirlScript Summer of Code</span>
                                             <span className="text-xs text-orange-500/80 font-bold uppercase tracking-[0.2em]">{gssocProjects.length} Repositories Merged</span>
@@ -70,9 +101,7 @@ export default function ContributionsSection() {
                             <AccordionTrigger className="hover:no-underline py-4 group">
                                 <div className="flex items-center justify-between w-full pr-4">
                                     <div className="flex items-center gap-4">
-                                        <div className="size-12 rounded-2xl bg-pink-500/20 border border-pink-500/30 flex items-center justify-center shadow-inner">
-                                            <Ghost className="size-6 text-pink-500 fill-pink-500/20" />
-                                        </div>
+                                        <LogoImage src="/hacktoberfest-animation.gif" alt="Hacktoberfest Logo" />
                                         <div className="flex flex-col items-start gap-0.5">
                                             <span className="text-xl font-bold tracking-tight bg-linear-to-br from-white to-white/60 bg-clip-text text-transparent">Hacktoberfest 2025</span>
                                             <span className="text-xs text-pink-500/80 font-bold uppercase tracking-[0.2em]">{hacktoberProjects.length} Repositories Merged</span>
