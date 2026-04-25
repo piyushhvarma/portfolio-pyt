@@ -378,7 +378,7 @@ export const DATA = {
           icon: <GitPullRequest className="size-3" />,
         },
       ],
-      image: "",
+      image: "/hacktoberfest'25/quote-of-the-day.png",
       video: "",
     },
     {
@@ -397,7 +397,7 @@ export const DATA = {
           icon: <GitPullRequest className="size-3" />,
         },
       ],
-      image: "",
+      image: "/hacktoberfest'25/roulette.png",
       video: "",
     },
     {
@@ -416,7 +416,7 @@ export const DATA = {
           icon: <GitPullRequest className="size-3" />,
         },
       ],
-      image: "",
+      image: "/hacktoberfest'25/devtoolkit.png",
       video: "",
     },
     {
@@ -435,7 +435,7 @@ export const DATA = {
           icon: <GitPullRequest className="size-3" />,
         },
       ],
-      image: "",
+      image: "/hacktoberfest'25/login-signup.png",
       video: "",
     },
     {
@@ -454,7 +454,7 @@ export const DATA = {
           icon: <GitPullRequest className="size-3" />,
         },
       ],
-      image: "",
+      image: "/hacktoberfest'25/hacktoberfest-2025.png",
       video: "",
     },
     {
@@ -473,7 +473,7 @@ export const DATA = {
           icon: <GitPullRequest className="size-3" />,
         },
       ],
-      image: "",
+      image: "/hacktoberfest'25/hacktoberbase.png",
       video: "",
     },
   ],
