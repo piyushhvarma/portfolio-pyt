@@ -362,6 +362,63 @@ export const DATA = {
       image: "",
       video: "",
     },
+    {
+      title: "Login-Signup Templates",
+      href: "https://github.com/avinash201199/Login-Signup-templates",
+      dates: "October 2025",
+      active: true,
+      description:
+        "Engineered a scalable theme engine for reusable login/signup templates. Implemented persistent dark mode using localStorage, CSS variables for design tokens, and synchronized scrolling utilities with smooth animations.",
+      technologies: ["CSS Variables", "JavaScript", "Local Storage", "UI UX"],
+      program: "Hacktoberfest '25",
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/avinash201199/Login-Signup-templates",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Hacktoberfest 2025 Hub",
+      href: "https://github.com/avinash201199/Hacktoberfest2025",
+      dates: "October 2025",
+      active: true,
+      description:
+        "Enhanced the official contribution hub with modern UI aesthetics. Implemented a gradient-based design language, glassmorphism sidebars, and an accessibility-focused dark/light theme system in the primary navigation.",
+      technologies: ["Glassmorphism", "CSS Gradients", "Responsive Design"],
+      program: "Hacktoberfest '25",
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/avinash201199/Hacktoberfest2025",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Hacktober Base",
+      href: "https://github.com/noodles-sed/hacktober-base",
+      dates: "October 2025",
+      active: true,
+      description:
+        "Improved cross-page navigation by implementing a smart 'Scroll to Top' component. Features include a dynamic scroll-depth threshold activation, fade-in/out transitions, and smooth scrolling optimization.",
+      technologies: ["JavaScript", "TailwindCSS", "Animation"],
+      program: "Hacktoberfest '25",
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/noodles-sed/hacktober-base",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
   ],
   hackathons: [
     {
