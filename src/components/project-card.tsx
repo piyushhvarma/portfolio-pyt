@@ -85,18 +85,6 @@ export function ProjectCard({
             <div className="w-full h-48 bg-muted" />
           )}
         </Link>
-        {program && (
-          <div className="absolute top-2 left-2 z-20">
-             <Badge className={cn(
-                "px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider backdrop-blur-md border",
-                program.toLowerCase().includes("gssoc") 
-                  ? "bg-orange-500/10 text-orange-500 border-orange-500/20" 
-                  : "bg-purple-500/10 text-purple-500 border-purple-500/20"
-             )}>
-                {program}
-             </Badge>
-          </div>
-        )}
         {links && links.length > 0 && (
           <div className="absolute top-2 right-2 flex flex-wrap gap-2">
             {links.map((link, idx) => (
