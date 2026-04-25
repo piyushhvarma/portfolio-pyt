@@ -15,8 +15,13 @@ export default function GithubCalendarSection() {
 
     const parseDate = (dateStr: string) => {
         const date = new Date(dateStr);
-        // "Mar 4, 2026"
         return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    };
+
+    // Sophisticated monochromatic palette explicitly mimicking the sleek terminal styling
+    const minimalTheme = {
+        light: ['#f4f4f5', '#d4d4d8', '#a1a1aa', '#52525b', '#18181b'],
+        dark: ['#1c1c1f', '#3f3f46', '#71717a', '#a1a1aa', '#f4f4f5'],
     };
 
     return (
@@ -29,7 +34,8 @@ export default function GithubCalendarSection() {
                     border-radius: 0.25em;
                     background-color: hsl(0 0% 10%);
                     color: hsl(0 0% 94%);
-                    font-size: 13px;
+                    font-family: var(--font-mono), monospace;
+                    font-size: 12px;
                     z-index: 50;
                 }
                 .react-activity-calendar__tooltip-arrow {
@@ -45,19 +51,24 @@ export default function GithubCalendarSection() {
                     fill: hsl(0 0% 90%);
                 }
             `}</style>
-            <div className="w-full flex justify-center mt-6 group relative z-10">
+            {/* Left-aligned and fully constrained width perfectly anchors the graph inside the flow of the design without bleeding off the edges */}
+            <div className="w-full mt-4 group relative z-10">
                 {mounted ? (
-                    // Expanded width by explicitly allocating the calendar up to 110% of standard boundaries, giving horizontal scale a massive boost while keeping the vector strictly compliant
-                    <div className="w-full sm:w-[110%] sm:-translate-x-[5%] max-w-[900px] flex justify-center pb-2 [&_svg]:!max-w-full [&_svg]:!w-full [&_svg]:!h-auto">
+                    <div className="w-full flex justify-start pb-2 [&_svg]:!max-w-full [&_svg]:!w-full [&_svg]:!h-auto">
                         <GitHubCalendar 
                             username="piyushhvarma"
-                            blockSize={16}
-                            blockMargin={4}
-                            blockRadius={3}
+                            blockSize={14}
+                            blockMargin={3}
+                            blockRadius={2}
                             colorScheme={(resolvedTheme === 'dark' || theme === 'dark') ? 'dark' : 'light'}
-                            fontSize={16}
+                            // @ts-ignore
+                            theme={minimalTheme}
+                            fontSize={13}
                             // @ts-ignore
                             hideScrollbar={true}
+                            style={{
+                                fontFamily: 'var(--font-mono), monospace',
+                            }}
                             tooltips={{
                                 activity: {
                                     // @ts-ignore
@@ -69,7 +80,7 @@ export default function GithubCalendarSection() {
                         />
                     </div>
                 ) : (
-                    <div className="h-[120px] w-full flex items-center justify-center text-muted-foreground">
+                    <div className="h-[120px] w-full flex items-center justify-start text-muted-foreground font-mono text-sm">
                         Loading activity...
                     </div>
                 )}
