@@ -71,7 +71,7 @@ export default function ContributionsSection() {
                 </div>
 
                 <div className="w-full max-w-[800px] mx-auto">
-                    <Accordion type="multiple" defaultValue={["gssoc"]} className="grid gap-6">
+                    <Accordion type="multiple" className="grid gap-6">
                         {/* GSSoC Section */}
                         <AccordionItem value="gssoc" className="border border-white/10 rounded-3xl px-4 py-2 bg-white/5 dark:bg-white/[0.03] backdrop-blur-xl shadow-2xl shadow-black/20 overflow-hidden transition-all hover:bg-white/10 dark:hover:bg-white/[0.05]">
                             <AccordionTrigger className="hover:no-underline py-4 group">
