@@ -13,7 +13,7 @@ import { ArrowUpRight } from "lucide-react";
 
 import BrandReactIcon from "@/components/ui/svgs/brandReactIcon";
 import BrandNextjsIcon from "@/components/ui/svgs/brandNextjsIcon";
-import { Typescript } from "@/components/ui/svgs/typescript";
+import TypescriptIcon from "@/components/ui/svgs/typescriptIcon";
 import { Tailwind } from "@/components/ui/svgs/tailwind";
 
 // New specialized components
@@ -59,7 +59,7 @@ export default function Page() {
             <p>
               Building interactive web apps with{" "}
               <span className="inline-flex items-center gap-1 rounded bg-blue-500/10 px-1.5 py-0.5 text-sm font-medium text-blue-500 border border-blue-500/20">
-                <Typescript className="size-3.5" /> TypeScript
+                <TypescriptIcon size={14} className="text-blue-500" /> TypeScript
               </span>
               {" "}
               <span className="inline-flex items-center gap-1 rounded bg-cyan-500/10 px-1.5 py-0.5 text-sm font-medium text-cyan-500 border border-cyan-500/20">
