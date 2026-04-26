@@ -152,7 +152,7 @@ export const DATA = {
         {
           type: "Website",
           href: "https://autosub-ai.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
+          icon: <Icons.website className="size-3" />,
         },
         {
           type: "Source",
@@ -185,7 +185,7 @@ export const DATA = {
         {
           type: "Website",
           href: "https://fridge2food-pyt.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
+          icon: <Icons.website className="size-3" />,
         },
         {
           type: "Source",
@@ -218,7 +218,7 @@ export const DATA = {
         {
           type: "Website",
           href: "https://medpulse-ai.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
+          icon: <Icons.website className="size-3" />,
         },
         {
           type: "Source",
@@ -226,6 +226,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
+
       image: "",
       video: "https://cdn.llm.report/openai-demo.mp4",
     },
