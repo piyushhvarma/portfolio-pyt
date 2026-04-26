@@ -47,10 +47,6 @@ export default function Navbar() {
             <Link href="/about" className="hover:text-foreground transition-colors pointer-events-auto px-2 py-1">
               About
             </Link>
-
-            <Link href="/photos" className="hover:text-foreground transition-colors pointer-events-auto px-2 py-1">
-              Photos
-            </Link>
           </div>
         </div>
       </nav>
