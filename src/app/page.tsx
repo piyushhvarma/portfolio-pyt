@@ -61,19 +61,19 @@ export default function Page() {
               <span className="inline-flex items-center gap-1 rounded bg-blue-500/10 px-1.5 py-0.5 text-sm font-medium text-blue-500 border border-blue-500/20">
                 <Typescript className="size-3.5" /> TypeScript
               </span>
-              {", "}
+              {" "}
               <span className="inline-flex items-center gap-1 rounded bg-cyan-500/10 px-1.5 py-0.5 text-sm font-medium text-cyan-500 border border-cyan-500/20">
                 <ReactLight className="size-3.5" /> React
               </span>
-              {", "}
+              {" "}
               <span className="inline-flex items-center gap-1 rounded bg-zinc-800 px-1.5 py-0.5 text-sm font-medium text-white border border-zinc-700 dark:bg-white/10 dark:text-white dark:border-white/20">
                 <NextjsIconDark className="size-3.5" /> Next.js
               </span>
-              {", and "}
+              {" and "}
               <span className="inline-flex items-center gap-1 rounded bg-teal-500/10 px-1.5 py-0.5 text-sm font-medium text-teal-500 border border-teal-500/20">
                 <Tailwind className="size-3.5" /> Tailwind CSS
               </span>
-              . Focused on UI/UX, learning DSA and system design, and growing towards building something of my own.
+              . Focused on UI/UX learning DSA and system design and growing towards building something of my own.
             </p>
           </div>
         </BlurFade>
