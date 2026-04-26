@@ -5,8 +5,10 @@ import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Markdown from "react-markdown";
+import type { AnimatedIconHandle } from "./ui/svgs/types";
+import React from "react";
 
 function ProjectImage({ src, alt }: { src: string; alt: string }) {
   const [imageError, setImageError] = useState(false);
@@ -41,6 +43,36 @@ interface Props {
     href: string;
   }[];
   className?: string;
+}
+
+function ProjectLink({ link }: { link: any }) {
+  const iconRef = useRef<AnimatedIconHandle>(null);
+
+  return (
+    <Link
+      href={link.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      onMouseEnter={() => iconRef.current?.startAnimation?.()}
+      onMouseLeave={() => iconRef.current?.stopAnimation?.()}
+      onClick={(e) => {
+        e.stopPropagation();
+        iconRef.current?.startAnimation?.();
+      }}
+    >
+      <Badge
+        className="flex items-center gap-1 text-[10px] sm:text-xs bg-black/80 hover:bg-black text-white border-white/10 backdrop-blur-md px-2 py-1"
+        variant="default"
+      >
+        {React.isValidElement(link.icon)
+          ? React.cloneElement(link.icon as React.ReactElement, {
+              ref: iconRef,
+            })
+          : link.icon}
+        {link.type}
+      </Badge>
+    </Link>
+  );
 }
 
 export function ProjectCard({
@@ -113,21 +145,7 @@ export function ProjectCard({
         {links && links.length > 0 && (
           <div className="flex flex-wrap gap-2">
             {links.map((link, idx) => (
-              <Link
-                href={link.href}
-                key={idx}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <Badge
-                  className="flex items-center gap-1 text-[10px] sm:text-xs bg-black/80 hover:bg-black text-white border-white/10 backdrop-blur-md px-2 py-1"
-                  variant="default"
-                >
-                  {link.icon}
-                  {link.type}
-                </Badge>
-              </Link>
+              <ProjectLink key={idx} link={link} />
             ))}
           </div>
         )}

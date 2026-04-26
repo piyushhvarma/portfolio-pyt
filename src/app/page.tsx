@@ -15,6 +15,7 @@ import BrandReactIcon from "@/components/ui/svgs/brandReactIcon";
 import BrandNextjsIcon from "@/components/ui/svgs/brandNextjsIcon";
 import TypescriptIcon from "@/components/ui/svgs/typescriptIcon";
 import { Tailwind } from "@/components/ui/svgs/tailwind";
+import { AnimatedSkillBadge } from "@/components/ui/animated-skill-badge";
 
 // New specialized components
 import { AvatarTrigger } from "@/components/ui/avatar-trigger";
@@ -58,17 +59,26 @@ export default function Page() {
           <div className="prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
             <p>
               Building interactive web apps with{" "}
-              <span className="inline-flex items-center gap-1 rounded bg-blue-500/10 px-1.5 py-0.5 text-sm font-medium text-blue-500 border border-blue-500/20">
-                <TypescriptIcon size={14} className="text-blue-500" /> TypeScript
-              </span>
+              <AnimatedSkillBadge
+                Icon={TypescriptIcon}
+                text="TypeScript"
+                className="bg-blue-500/10 text-blue-500 border-blue-500/20"
+                iconClassName="text-blue-500"
+              />
               {" "}
-              <span className="inline-flex items-center gap-1 rounded bg-cyan-500/10 px-1.5 py-0.5 text-sm font-medium text-cyan-500 border border-cyan-500/20">
-                <BrandReactIcon size={14} className="text-cyan-500" /> React
-              </span>
+              <AnimatedSkillBadge
+                Icon={BrandReactIcon}
+                text="React"
+                className="bg-cyan-500/10 text-cyan-500 border-cyan-500/20"
+                iconClassName="text-cyan-500"
+              />
               {" "}
-              <span className="inline-flex items-center gap-1 rounded bg-zinc-800 px-1.5 py-0.5 text-sm font-medium text-white border border-zinc-700 dark:bg-white/10 dark:text-white dark:border-white/20">
-                <BrandNextjsIcon size={14} className="text-white" /> Next.js
-              </span>
+              <AnimatedSkillBadge
+                Icon={BrandNextjsIcon}
+                text="Next.js"
+                className="bg-zinc-800 text-white border-zinc-700 dark:bg-white/10 dark:text-white dark:border-white/20"
+                iconClassName="text-white"
+              />
               {" and "}
               <span className="inline-flex items-center gap-1 rounded bg-teal-500/10 px-1.5 py-0.5 text-sm font-medium text-teal-500 border border-teal-500/20">
                 <Tailwind className="size-3.5" /> Tailwind CSS
