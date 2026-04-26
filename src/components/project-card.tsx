@@ -65,7 +65,7 @@ function ProjectLink({ link }: { link: any }) {
         variant="default"
       >
         {React.isValidElement(link.icon)
-          ? React.cloneElement(link.icon as React.ReactElement, {
+          ? React.cloneElement(link.icon as React.ReactElement<any>, {
               ref: iconRef,
             })
           : link.icon}
