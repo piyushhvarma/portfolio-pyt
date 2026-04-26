@@ -1,5 +1,3 @@
-"use client";
-
 import { GlobeIcon, MailIcon } from "lucide-react";
 import GithubIcon from "./ui/svgs/githubAnimated";
 
