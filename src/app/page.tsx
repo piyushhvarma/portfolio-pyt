@@ -12,7 +12,7 @@ import HeroTitleLoop from "@/components/ui/hero-title-loop";
 import { ArrowUpRight } from "lucide-react";
 
 import { ReactLight } from "@/components/ui/svgs/reactLight";
-import { NextjsIconDark } from "@/components/ui/svgs/nextjsIconDark";
+import BrandNextjsIcon from "@/components/ui/svgs/brandNextjsIcon";
 import { Typescript } from "@/components/ui/svgs/typescript";
 import { Tailwind } from "@/components/ui/svgs/tailwind";
 
@@ -67,7 +67,7 @@ export default function Page() {
               </span>
               {" "}
               <span className="inline-flex items-center gap-1 rounded bg-zinc-800 px-1.5 py-0.5 text-sm font-medium text-white border border-zinc-700 dark:bg-white/10 dark:text-white dark:border-white/20">
-                <NextjsIconDark className="size-3.5" /> Next.js
+                <BrandNextjsIcon size={14} className="text-white" /> Next.js
               </span>
               {" and "}
               <span className="inline-flex items-center gap-1 rounded bg-teal-500/10 px-1.5 py-0.5 text-sm font-medium text-teal-500 border border-teal-500/20">
