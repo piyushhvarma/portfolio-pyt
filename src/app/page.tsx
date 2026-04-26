@@ -11,7 +11,7 @@ import WorkSection from "@/components/section/work-section";
 import HeroTitleLoop from "@/components/ui/hero-title-loop";
 import { ArrowUpRight } from "lucide-react";
 
-import { ReactLight } from "@/components/ui/svgs/reactLight";
+import BrandReactIcon from "@/components/ui/svgs/brandReactIcon";
 import BrandNextjsIcon from "@/components/ui/svgs/brandNextjsIcon";
 import { Typescript } from "@/components/ui/svgs/typescript";
 import { Tailwind } from "@/components/ui/svgs/tailwind";
@@ -63,7 +63,7 @@ export default function Page() {
               </span>
               {" "}
               <span className="inline-flex items-center gap-1 rounded bg-cyan-500/10 px-1.5 py-0.5 text-sm font-medium text-cyan-500 border border-cyan-500/20">
-                <ReactLight className="size-3.5" /> React
+                <BrandReactIcon size={14} className="text-cyan-500" /> React
               </span>
               {" "}
               <span className="inline-flex items-center gap-1 rounded bg-zinc-800 px-1.5 py-0.5 text-sm font-medium text-white border border-zinc-700 dark:bg-white/10 dark:text-white dark:border-white/20">
