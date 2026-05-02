@@ -53,6 +53,9 @@ export const metadata: Metadata = {
     google: "",
     yandex: "",
   },
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 import Footer from "@/components/footer";
