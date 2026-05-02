@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Text3DFlip from "@/components/ui/text-3d-flip";
 
 const TITLES = [
-  "Software Tinkerer",
   "Full Stack Developer",
   "Entrepreneur",
   "Open Source Contributor"
