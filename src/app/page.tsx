@@ -19,6 +19,7 @@ import { AnimatedSkillBadge } from "@/components/ui/animated-skill-badge";
 
 // New specialized components
 import { AvatarTrigger } from "@/components/ui/avatar-trigger";
+import ActionBar from "@/components/action-bar";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -89,6 +90,10 @@ export default function Page() {
         </BlurFade>
       </section>
 
+      <section id="actions">
+        <ActionBar />
+      </section>
+
       <section id="projects">
         <div className="flex min-h-0 flex-col gap-y-4 mb-4">
           <BlurFade delay={BLUR_FADE_DELAY * 3.5}>
@@ -129,6 +134,23 @@ export default function Page() {
                       <span className="text-[9px] text-muted-foreground font-bold tracking-tighter leading-none h-fit pt-[2px]">L</span>
                     )}
                   </span>
+                </div>
+              </BlurFade>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="learning">
+        <div className="flex min-h-0 flex-col gap-y-4">
+          <BlurFade delay={BLUR_FADE_DELAY * 4.5}>
+            <h2 className="text-xl font-bold">Currently Learning</h2>
+          </BlurFade>
+          <div className="flex flex-wrap gap-2">
+            {DATA.learning.map((topic, id) => (
+              <BlurFade key={topic} delay={BLUR_FADE_DELAY * 4.8 + id * 0.05}>
+                <div className="border bg-zinc-50 dark:bg-zinc-900 border-border rounded-xl h-8 w-fit px-4 flex items-center text-sm font-medium text-muted-foreground">
+                  {topic}
                 </div>
               </BlurFade>
             ))}
