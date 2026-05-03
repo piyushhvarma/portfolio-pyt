@@ -36,17 +36,16 @@ export default function Navbar() {
 
           {/* Navigation Links (Absolute Screen Center) */}
           <div className="absolute inset-0 flex items-center justify-center gap-4 sm:gap-5 md:gap-8 text-sm font-medium text-muted-foreground whitespace-nowrap pointer-events-none">
-            <Link
-              href="/"
-              onClick={scrollToTop}
-              className="hover:text-foreground transition-colors pointer-events-auto px-2 py-1"
-            >
-              Home
-            </Link>
-            
-            <Link href="/about" className="hidden hover:text-foreground transition-colors pointer-events-auto px-2 py-1">
-              About
-            </Link>
+            {DATA.navbar.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={item.href === "/" ? scrollToTop : undefined}
+                className="hover:text-foreground transition-colors pointer-events-auto px-2 py-1"
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
         </div>
       </nav>
