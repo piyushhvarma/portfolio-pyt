@@ -59,6 +59,7 @@ export const metadata: Metadata = {
 };
 
 import Footer from "@/components/footer";
+import Script from "next/script";
 
 export default function RootLayout({
   children,
@@ -67,6 +68,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <Script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="a9f68a17-b958-4679-a7cc-d2eef9d2ed48"
+        />
+      </head>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased relative",
