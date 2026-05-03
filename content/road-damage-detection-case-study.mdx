@@ -1,0 +1,48 @@
+---
+title: "Road Damage Detection: Building an End-to-End Computer Vision Pipeline"
+publishedAt: "2026-05-03"
+updatedAt: "2026-05-03"
+author: "Piyush Varma"
+summary: "A deep dive into how I built a custom YOLOv8 model to detect road damage from dashcam footage, handle massive datasets, and map the results."
+image: "https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?w=800&h=192&fit=crop"
+---
+
+# Road Damage Detection: An End-to-End Computer Vision Pipeline
+
+I built an end-to-end computer vision pipeline designed to help city planners map out road damage. It takes dashcam video footage, processes it frame-by-frame using a custom-trained YOLOv8 model, identifies 5 types of road damage like potholes and alligator cracks, and plots their exact GPS coordinates onto an interactive Folium web map. 
+
+The hardest part wasn't just the AI; it was cleaning and merging 10GB of conflicting datasets and building the inference pipeline to handle blurry, high-speed video.
+
+## The Core Challenges & Solutions
+
+Building a machine learning model for real-world scenarios introduces significant MLOps hurdles. Here is how I overcame them:
+
+### Challenge 1: Dataset Label Conflicts & Data Cleaning
+
+- **The Problem:** I was using the massive global RDD2022 dataset, but it lacked enough high-quality pothole examples to hit my accuracy targets. I found a second dataset (Pothole.v1), but the annotation labels didn't match. In the second dataset, "Pothole" was labeled as Class 0, but in my main dataset, Class 0 was "Longitudinal Crack" and Pothole was Class 3. If I trained the model on this, it would get completely confused.
+- **The Solution:** I wrote a custom Python script (`train_colab_merged.py`) that iterated through thousands of `.txt` annotation files in the new dataset, parsed the labels, and dynamically re-mapped the Class IDs (from 0 to 3) before merging them into one unified, 10GB super-dataset.
+
+### Challenge 2: Dashcam Motion Blur & False Negatives
+
+- **The Problem:** When I deployed the initial model on actual dashcam footage (`test_video.mp4`), it was missing obvious potholes. The model was trained on clear images, but dashcams at 40mph have motion blur.
+- **The Solution:** I realized my confidence threshold in `app.py` was set way too strict at 90% (0.90). Because of the blur, the model was only 60-70% confident it was a pothole and ignored it. I dropped the threshold to 45% (0.45), which drastically reduced false negatives without introducing too much noise.
+
+### Challenge 3: Resource Constraints & Version Control Limits
+
+- **The Problem:** Dealing with a 10GB dataset completely crashed my local machine and broke my GitHub repository because GitHub strictly limits pushes over a few hundred megabytes.
+- **The Solution:** For the training, I offloaded the heavy lifting to Google Colab GPUs. For version control, I had to implement a strict `.gitignore` policy, use Git commands to untrack and un-commit massive `.pt` weight files and `.mp4` datasets from the local index, and only push the inference code (`app.py`), the dataset merging scripts, and the final HTML map outputs to version control.
+
+### Challenge 4: Meaningful Output Generation
+
+- **The Problem:** A video with bounding boxes looks cool, but it isn’t actionable for a city council that needs to send out repair trucks.
+- **The Solution:** I simulated GPS tracking in `app.py` and used the `folium` library to plot every single detection onto an interactive HTML map (`pothole_map.html`). I color-coded the map markers (e.g., Red for Potholes, Orange for Cracks) so users could visually prioritize road repairs.
+
+## Technical Q&A
+
+**Q: Why did you choose YOLOv8 instead of Faster R-CNN or an older YOLO?**
+
+> "YOLOv8 strikes the best balance between accuracy and inference speed. Because my goal was to process video feeds (which requires processing ~30 frames per second), Faster R-CNN would be too slow and computationally heavy. I chose the YOLOv8-Medium (yolov8m) model specifically because the Nano model was too inaccurate for small cracks, and the Large model was overkill and too slow for real-time inference."
+
+**Q: If you had 6 more months to work on this, what would you improve?**
+
+> "First, I would integrate real hardware by hooking it up to a Raspberry Pi with a real GPS module to capture live coordinates instead of simulated ones. Second, I would build an object tracking algorithm (like DeepSORT) into `app.py`. Right now, if a pothole is in the frame for 10 frames, it registers as 10 detections. Object tracking would assign it a unique ID so it is only mapped and counted once."

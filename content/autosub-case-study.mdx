@@ -1,0 +1,72 @@
+---
+title: "AutoSub: Scaling AI-Powered Video Subtitling"
+publishedAt: "2024-02-15"
+updatedAt: "2026-05-03"
+author: "Piyush Varma"
+summary: "An in-depth look at building a SaaS that automates video transcription and subtitle generation using AI, focusing on handling large file uploads and real-time processing."
+image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&h=192&fit=crop"
+---
+
+# AutoSub: Scaling AI-Powered Video Subtitling
+
+AutoSub is a full-stack SaaS platform designed to solve one of the most tedious tasks for content creators: manual subtitling. By leveraging AI models, AutoSub converts speech to text and generates perfectly synced subtitles in seconds.
+
+## 🚀 Project Overview
+
+**URL:** [autosub-ai.vercel.app](https://autosub-ai.vercel.app/)  
+**Domain:** Content Creation / AI SaaS  
+**Core Function:** Automated video transcription, subtitle styling, and export.
+
+---
+
+## 🎭 The STAR Method Breakdown
+
+### 📍 Situation (The Problem)
+Content creators spend hours manually typing out subtitles or paying high fees for professional transcription. Existing free tools often have poor accuracy or lack customization options for styling.
+
+### 🎯 Task (The Goal)
+Build a seamless, automated pipeline where a user can upload a video and receive accurate, styled subtitles with minimal manual intervention. The goal was to reduce a 1-hour task to under 5 minutes.
+
+### 🛠️ Action (What We Did)
+*   **Transcription Engine:** Integrated high-accuracy AI models to handle diverse accents and background noise.
+*   **Custom Subtitle Editor:** Built a React-based editor that allows users to tweak timings, change fonts, and adjust colors in real-time.
+*   **Performance Optimization:** Implemented chunked file uploads to handle large video files without timing out on serverless functions.
+
+### 🏆 Result (The Impact)
+AutoSub successfully automated the transcription process, achieving a **95%+ accuracy rate** on clear audio and reducing the "time-to-publish" for creators significantly.
+
+---
+
+## 🧠 Challenges & Engineering Solutions
+
+### Challenge 1: Handling Large Video Uploads
+*   **Issue:** Standard serverless functions have strict timeout and payload limits (usually 4.5MB), making raw video uploads impossible.
+*   **Solution:** Implemented **direct-to-S3 uploads** using pre-signed URLs. This bypassed the server entirely, allowing users to upload GBs of data directly to cloud storage reliably.
+
+### Challenge 2: Synchronizing Subtitles with Video Playback
+*   **Issue:** Ensuring the text highlights exactly when the speaker talks required precise timestamp mapping.
+*   **Solution:** Developed a **frame-accurate synchronization logic** using HTML5 Video APIs and the VTT (Web Video Text Tracks) format to ensure a smooth, professional viewing experience.
+
+### Challenge 3: Cost-Effective AI Processing
+*   **Issue:** Running large AI models for every video can be extremely expensive.
+*   **Solution:** Architected a **queue-based processing system** that optimizes model usage, ensuring that compute resources are only active when needed, significantly lowering operational overhead.
+
+---
+
+## 🛠️ Technology Stack
+
+| Layer | Technology |
+| :--- | :--- |
+| **Framework** | Next.js (App Router) |
+| **Database** | PostgreSQL with Prisma ORM |
+| **AI/ML** | Speech-to-Text APIs |
+| **Storage** | AWS S3 / Cloudflare R2 |
+| **Payments** | Stripe (Subscription logic) |
+| **Styling** | Tailwind CSS & Shadcn UI |
+
+---
+
+## 📈 Future Roadmap
+*   **Multi-language Translation:** Translating subtitles into 50+ languages automatically.
+*   **AI Video Clipping:** Automatically finding the "viral" moments in long-form videos to create shorts/reels.
+*   **Collaborative Editing:** Allowing teams to review and edit subtitles together in real-time.
