@@ -88,6 +88,9 @@ export function ProjectCard({
   links,
   className,
 }: Props) {
+  const caseStudyLink = links?.find((link) => link.type === "Case Study");
+  const otherLinks = links?.filter((link) => link.type !== "Case Study");
+
   return (
     <div
       className={cn(
@@ -117,6 +120,11 @@ export function ProjectCard({
             <div className="w-full aspect-video bg-muted" />
           )}
         </Link>
+        {caseStudyLink && (
+          <div className="absolute top-3 right-3 z-10">
+            <ProjectLink link={caseStudyLink} />
+          </div>
+        )}
       </div>
       <div className="p-6 flex flex-col gap-3 flex-1">
         <div className="flex items-start justify-between gap-2">
@@ -142,9 +150,9 @@ export function ProjectCard({
           <Markdown>{description}</Markdown>
         </div>
         
-        {links && links.length > 0 && (
+        {otherLinks && otherLinks.length > 0 && (
           <div className="flex flex-wrap gap-2">
-            {links.map((link, idx) => (
+            {otherLinks.map((link, idx) => (
               <ProjectLink key={idx} link={link} />
             ))}
           </div>

@@ -26,73 +26,75 @@ const BLUR_FADE_DELAY = 0.04;
 export default function Page() {
   return (
     <main className="min-h-dvh flex flex-col gap-14 relative px-4 md:px-8 pb-20 pt-8">
-      <section id="hero">
-        <div className="mx-auto w-full">
-          <div className="flex items-center gap-6">
-            <BlurFade delay={BLUR_FADE_DELAY}>
-              <AvatarTrigger />
-            </BlurFade>
-            
-            <div className="flex flex-col gap-2 w-full">
-              <BlurFade delay={BLUR_FADE_DELAY} yOffset={8}>
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 w-full">
-                  <h1 className="text-2xl font-bold tracking-tighter sm:text-4xl">
-                    Piyush Varma
-                  </h1>
-                  <span className="inline-flex w-fit items-center gap-2 rounded-full border border-border/40 bg-zinc-900/5 dark:bg-white/5 backdrop-blur-md px-3 py-1 text-xs sm:text-sm font-medium text-muted-foreground ring-1 ring-inset ring-white/10 mt-1 sm:mt-0">
-                    <span className="size-2 rounded-full bg-green-500"></span>
-                    Open to work
-                  </span>
-                </div>
+      <div className="flex flex-col gap-6">
+        <section id="hero">
+          <div className="mx-auto w-full">
+            <div className="flex items-center gap-6">
+              <BlurFade delay={BLUR_FADE_DELAY}>
+                <AvatarTrigger />
               </BlurFade>
-              <BlurFade delay={BLUR_FADE_DELAY * 2.5} yOffset={8}>
-                <div className="flex w-fit items-start justify-start">
-                  <HeroTitleLoop />
-                </div>
-              </BlurFade>
+              
+              <div className="flex flex-col gap-2 w-full">
+                <BlurFade delay={BLUR_FADE_DELAY} yOffset={8}>
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 w-full">
+                    <h1 className="text-2xl font-bold tracking-tighter sm:text-4xl">
+                      Piyush Varma
+                    </h1>
+                    <span className="inline-flex w-fit items-center gap-2 rounded-full border border-border/40 bg-zinc-900/5 dark:bg-white/5 backdrop-blur-md px-3 py-1 text-xs sm:text-sm font-medium text-muted-foreground ring-1 ring-inset ring-white/10 mt-1 sm:mt-0">
+                      <span className="size-2 rounded-full bg-green-500"></span>
+                      Open to work
+                    </span>
+                  </div>
+                </BlurFade>
+                <BlurFade delay={BLUR_FADE_DELAY * 2.5} yOffset={8}>
+                  <div className="flex w-fit items-start justify-start">
+                    <HeroTitleLoop />
+                  </div>
+                </BlurFade>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="summary">
-        <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <div className="prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
-            <p>
-              Building interactive web apps with{" "}
-              <AnimatedSkillBadge
-                Icon={TypescriptIcon}
-                text="TypeScript"
-                className="bg-blue-500/10 text-blue-500 border-blue-500/20"
-                iconClassName="text-blue-500"
-              />
-              {" "}
-              <AnimatedSkillBadge
-                Icon={BrandReactIcon}
-                text="React"
-                className="bg-cyan-500/10 text-cyan-500 border-cyan-500/20"
-                iconClassName="text-cyan-500"
-              />
-              {" "}
-              <AnimatedSkillBadge
-                Icon={BrandNextjsIcon}
-                text="Next.js"
-                className="bg-zinc-800 text-white border-zinc-700 dark:bg-white/10 dark:text-white dark:border-white/20"
-                iconClassName="text-white"
-              />
-              {" and "}
-              <span className="inline-flex items-center gap-1 rounded bg-teal-500/10 px-1.5 py-0.5 text-sm font-medium text-teal-500 border border-teal-500/20">
-                <Tailwind className="size-3.5" /> Tailwind CSS
-              </span>
-              . Focused on UI/UX learning DSA and system design and growing towards building something of my own.
-            </p>
-          </div>
-        </BlurFade>
-      </section>
+        <section id="summary">
+          <BlurFade delay={BLUR_FADE_DELAY * 3}>
+            <div className="prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
+              <p>
+                Building interactive web apps with{" "}
+                <AnimatedSkillBadge
+                  Icon={TypescriptIcon}
+                  text="TypeScript"
+                  className="bg-blue-500/10 text-blue-500 border-blue-500/20"
+                  iconClassName="text-blue-500"
+                />
+                {" "}
+                <AnimatedSkillBadge
+                  Icon={BrandReactIcon}
+                  text="React"
+                  className="bg-cyan-500/10 text-cyan-500 border-cyan-500/20"
+                  iconClassName="text-cyan-500"
+                />
+                {" "}
+                <AnimatedSkillBadge
+                  Icon={BrandNextjsIcon}
+                  text="Next.js"
+                  className="bg-zinc-800 text-white border-zinc-700 dark:bg-white/10 dark:text-white dark:border-white/20"
+                  iconClassName="text-white"
+                />
+                {" and "}
+                <span className="inline-flex items-center gap-1 rounded bg-teal-500/10 px-1.5 py-0.5 text-sm font-medium text-teal-500 border border-teal-500/20">
+                  <Tailwind className="size-3.5" /> Tailwind CSS
+                </span>
+                . Focused on UI/UX learning DSA and system design and growing towards building something of my own.
+              </p>
+            </div>
+          </BlurFade>
+        </section>
 
-      <section id="actions">
-        <ActionBar />
-      </section>
+        <section id="actions">
+          <ActionBar />
+        </section>
+      </div>
 
       <section id="projects">
         <div className="flex min-h-0 flex-col gap-y-4 mb-4">

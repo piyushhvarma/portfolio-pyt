@@ -64,8 +64,8 @@ export default function ContributionsSection() {
                     <div className="flex flex-col gap-y-3 items-center justify-center">
                         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl px-2 text-center">Open Source Impact</h2>
                         <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed text-balance text-center max-w-[600px]">
-                            Collaborating with global communities to build better software.
-                            Tap to explore my contributions across various programs.
+                            Collaborating with <strong className="font-medium text-foreground">global communities</strong> to build <strong className="font-medium text-foreground">better software</strong>.
+                            Tap to explore my <strong className="font-medium text-foreground">contributions</strong> across various programs.
                         </p>
                     </div>
                 </div>
