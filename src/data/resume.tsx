@@ -10,6 +10,7 @@ import { Docker } from "@/components/ui/svgs/docker";
 import { Kubernetes } from "@/components/ui/svgs/kubernetes";
 import { Csharp } from "@/components/ui/svgs/csharp";
 import { Tailwind } from "@/components/ui/svgs/tailwind";
+import BookIcon from "@/components/ui/svgs/bookIcon";
 
 export const DATA = {
   name: "Piyush Varma",
@@ -54,6 +55,7 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
+    { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
     email: "pytworks@gmail.com",
@@ -150,12 +152,85 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "MUJ AIML Exam Seating Portal",
+      href: "https://muj-aiml-seating.vercel.app",
+      dates: "April 2026 - May 2026",
+      active: true,
+      description:
+        "Developed a **high-traffic exam portal** that served **1,850+ unique visitors** and generated **2,900+ page views** within a single 10-day exam window. Engineered a **mobile-first UI** with Next.js 15, Tailwind v4, and a **Three.js neural network background**, reducing seat-finding time from **3 minutes to less than 2 seconds**.",
+      technologies: [
+        "Next.js 15",
+        "Tailwind CSS v4",
+        "Framer Motion",
+        "Three.js",
+        "PostHog",
+        "Microsoft Clarity",
+        "TypeScript",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://muj-aiml-seating.vercel.app",
+          icon: <Icons.website className="size-3" />,
+        },
+        {
+          type: "Case Study",
+          href: "/blog/muj-aiml-seating-portal",
+          icon: <BookIcon size={12} />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/piyushhvarma/muj-aiml-seating",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Road Damage Detection",
+      href: "/blog/road-damage-detection-case-study",
+      dates: "March 2026 - April 2026",
+      active: true,
+      description:
+        "Built an **end-to-end computer vision pipeline** using a **custom-trained YOLOv8 model** to identify 5 types of road damage from dashcam footage and map them to **interactive GPS coordinates**. Resolved complex **MLOps challenges** including cleaning and merging **10GB of conflicting datasets**, overcoming **GitHub storage limits**, and adjusting confidence thresholds to handle **high-speed motion blur**.",
+      technologies: [
+        "Python",
+        "YOLOv8",
+        "Computer Vision",
+        "Folium",
+        "OpenCV",
+        "Pandas",
+        "MLOps",
+        "Google Colab",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://project-pothole.vercel.app/",
+          icon: <Icons.website className="size-3" />,
+        },
+        {
+          type: "Case Study",
+          href: "/blog/road-damage-detection-case-study",
+          icon: <BookIcon size={12} />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/piyushhvarma",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
       title: "AutoSub - AI Subtitles Generator",
       href: "https://autosub-ai.vercel.app/",
       dates: "Jan 2024 - Feb 2024",
       active: true,
       description:
-        "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
+        "Built an **AI-powered SaaS** platform that automates **video transcription** and **subtitle generation**. Engineered an intuitive dashboard for creators to process videos, customize subtitle styling, and drastically reduce manual editing time while improving **content accessibility**.",
       technologies: [
         "Next.js",
         "Typescript",
@@ -173,14 +248,18 @@ export const DATA = {
           icon: <Icons.website className="size-3" />,
         },
         {
+          type: "Case Study",
+          href: "/blog/autosub-case-study",
+          icon: <BookIcon size={12} />,
+        },
+        {
           type: "Source",
           href: "https://github.com/piyushhvarma/autosub",
           icon: <Icons.github className="size-3" />,
         },
       ],
       image: "",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+      video: "/autosub.mp4",
     },
     {
       title: "Fridge2Food - AI Recipe Generator",
@@ -188,7 +267,7 @@ export const DATA = {
       dates: "Feb 2026 - March 2026",
       active: true,
       description:
-        "Fridge2Food is a web application that helps users generate recipes based on the ingredients they have in their fridge. It uses AI to generate recipes that are tailored to the user's preferences and dietary restrictions.",
+        "Engineered a **smart recipe generator** that helps users reduce food waste by utilizing ingredients they already have. Leveraged **AI integration** to dynamically generate personalized meals tailored to specific **dietary preferences and nutritional restrictions**.",
       technologies: [
         "Next.js",
         "Typescript",
@@ -220,7 +299,7 @@ export const DATA = {
       dates: "April 2023 - September 2023",
       active: true,
       description:
-        "Medpulse-AI is a web application that helps users generate medical reports based on the symptoms they have. It uses AI to generate medical reports that are tailored to the user's specific case and provided symptoms.",
+        "Developed an **AI-driven healthcare assistant** designed to analyze user symptoms and generate preliminary **medical insights**. Integrated advanced **natural language processing** to provide tailored advice, helping users better understand their conditions before consulting professionals.",
       technologies: [
         "Next.js",
         "Typescript",
@@ -255,8 +334,8 @@ export const DATA = {
       href: "https://github.com/Riti2407/my-habit-tracker",
       dates: "June 2025 - July 2025",
       active: true,
-      description: `- Developed a data-driven Habit Tracker dashboard during GSSoC 2025.
-- Implemented a cross-platform Data Export feature (JSON/CSV), interactive monthly summary analytics, and comprehensive UI refinements for accessibility and dark mode consistency.`,
+      description: `- Developed a **data-driven Habit Tracker dashboard** during GSSoC 2025.
+- Implemented a cross-platform **Data Export feature (JSON/CSV)**, interactive **monthly summary analytics**, and comprehensive **UI refinements** for accessibility and dark mode consistency.`,
       technologies: ["React", "Next.js", "TailwindCSS", "Chart.js", "Web APIs"],
       program: "GSSoC '25",
       links: [
@@ -274,8 +353,8 @@ export const DATA = {
       href: "https://github.com/supriya46788/Research-Paper-Organizer",
       dates: "July 2025",
       active: true,
-      description: `- Simplified academic resource management for GSSoC 2025.
-- Replaced manual year inputs with optimized dropdown filters, streamlining usability and ensuring seamless integration with legacy backend logic.`,
+      description: `- Simplified **academic resource management** for GSSoC 2025.
+- Replaced manual year inputs with **optimized dropdown filters**, streamlining usability and ensuring seamless integration with legacy backend logic.`,
       technologies: ["JavaScript", "HTML/CSS", "UI/UX Optimization"],
       program: "GSSoC '25",
       links: [
@@ -293,8 +372,8 @@ export const DATA = {
       href: "https://github.com/Kritika75/TheCawnporeMag.github.io",
       dates: "July 2025 - August 2025",
       active: true,
-      description: `- Led UI/UX refinements for a digital magazine platform.
-- Optimized the newsletter subscription interface for responsiveness, enhanced navbar contrast for improved accessibility, and implemented interactive hover effects to boost user engagement.`,
+      description: `- Led **UI/UX refinements** for a digital magazine platform.
+- Optimized the **newsletter subscription interface** for responsiveness, enhanced **navbar contrast** for improved accessibility, and implemented interactive **hover effects** to boost user engagement.`,
       technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
       program: "GSSoC '25",
       links: [
@@ -312,8 +391,8 @@ export const DATA = {
       href: "https://github.com/VAIBHAVBABELE/vaibhavbabele.github.io",
       dates: "August 2025",
       active: true,
-      description: `- Resolved accessibility issues in the NITraMITra portal by fixing dark mode visibility bugs.
-- Redefined color variables to ensure WCAG-compliant text contrast and a consistent thematic experience across the UI.`,
+      description: `- Resolved **accessibility issues** in the NITraMITra portal by fixing dark mode visibility bugs.
+- Redefined **color variables** to ensure WCAG-compliant text contrast and a consistent thematic experience across the UI.`,
       technologies: ["CSS Variables", "Accessibility", "Dark Mode"],
       program: "GSSoC '25",
       links: [
@@ -331,8 +410,8 @@ export const DATA = {
       href: "https://github.com/SamXop123/RigCrafter",
       dates: "August 2025",
       active: true,
-      description: `- Enhanced the browsing experience for RigCrafter by introducing a global 'Back to Top' navigation system.
-- Implemented custom fade-in animations and smooth-scrolling behaviors using modern JavaScript.`,
+      description: `- Enhanced the browsing experience for RigCrafter by introducing a global **'Back to Top' navigation system**.
+- Implemented custom **fade-in animations** and smooth-scrolling behaviors using modern JavaScript.`,
       technologies: ["JavaScript Animations", "UI Interactivity", "Frontend"],
       program: "GSSoC '25",
       links: [
@@ -350,8 +429,8 @@ export const DATA = {
       href: "https://github.com/sampadatiwari30/DeshDarshan",
       dates: "July 2025",
       active: true,
-      description: `- Refined the visual consistency of Desh Darshan by resolving layout alignment issues and viewport artifacts.
-- Optimized the footer structure and ensured a unified full-viewport design across the platform.`,
+      description: `- Refined the **visual consistency** of Desh Darshan by resolving layout alignment issues and viewport artifacts.
+- Optimized the **footer structure** and ensured a unified full-viewport design across the platform.`,
       technologies: ["CSS Layouts", "Viewport Optimization", "UI Refinement"],
       program: "GSSoC '25",
       links: [
@@ -369,8 +448,8 @@ export const DATA = {
       href: "https://github.com/AKing-283/Rewear",
       dates: "June 2025",
       active: true,
-      description: `- Redesigned the foundational layout of ReWear's sustainable fashion landing page.
-- Built an accessibility-first footer with multi-column content and integrated newsletter components to enhance community building.`,
+      description: `- Redesigned the **foundational layout** of ReWear's sustainable fashion landing page.
+- Built an **accessibility-first footer** with multi-column content and integrated **newsletter components** to enhance community building.`,
       technologies: ["React", "TailwindCSS", "UI/UX Design"],
       program: "GSSoC '25",
       links: [
@@ -388,8 +467,8 @@ export const DATA = {
       href: "https://github.com/DipanNama/quote-of-the-day",
       dates: "October 2025",
       active: true,
-      description: `- Architected keyboard navigation (arrow keys) and parallel API fetching logic (Promise.any) to enhance user experience and performance.
-- Implemented stable fallback systems and timeout handling for robust remote data fetching.`,
+      description: `- Architected **keyboard navigation** (arrow keys) and **parallel API fetching logic** (Promise.any) to enhance user experience and performance.
+- Implemented stable **fallback systems** and timeout handling for robust remote data fetching.`,
       technologies: ["JavaScript", "Async/Await", "Accessibility (A11y)", "Performance"],
       program: "Hacktoberfest '25",
       links: [
@@ -407,8 +486,8 @@ export const DATA = {
       href: "https://github.com/idna001/roulette-calculator-react",
       dates: "October 2025",
       active: true,
-      description: `- Implemented a scalable React-based theme system using State and Effect hooks.
-- Built persistent user preferences with localStorage and global CSS variables for a seamless dark/light mode transition across the application.`,
+      description: `- Implemented a scalable **React-based theme system** using State and Effect hooks.
+- Built persistent user preferences with **localStorage** and global **CSS variables** for a seamless dark/light mode transition across the application.`,
       technologies: ["React", "CSS Variables", "localStorage", "Hooks"],
       program: "Hacktoberfest '25",
       links: [
@@ -426,8 +505,8 @@ export const DATA = {
       href: "https://github.com/heysaiyad/dev-toolkit",
       dates: "October 2025",
       active: true,
-      description: `- Contributed several utility tools including Even/Odd checkers and mathematical calculation modules.
-- Focused on robust input validation, color-coded visual feedback, and theme-aware UI components.`,
+      description: `- Contributed several utility tools including **Even/Odd checkers** and mathematical calculation modules.
+- Focused on robust **input validation**, color-coded visual feedback, and **theme-aware UI components**.`,
       technologies: ["HTML", "CSS", "JavaScript", "Logic Optimization"],
       program: "Hacktoberfest '25",
       links: [
@@ -445,8 +524,8 @@ export const DATA = {
       href: "https://github.com/avinash201199/Login-Signup-templates",
       dates: "October 2025",
       active: true,
-      description: `- Engineered a scalable theme engine for reusable login/signup templates.
-- Implemented persistent dark mode using localStorage, CSS variables for design tokens, and synchronized scrolling utilities with smooth animations.`,
+      description: `- Engineered a **scalable theme engine** for reusable login/signup templates.
+- Implemented **persistent dark mode** using localStorage, CSS variables for design tokens, and **synchronized scrolling utilities** with smooth animations.`,
       technologies: ["CSS Variables", "JavaScript", "Local Storage", "UI UX"],
       program: "Hacktoberfest '25",
       links: [
@@ -464,8 +543,8 @@ export const DATA = {
       href: "https://github.com/avinash201199/Hacktoberfest2025",
       dates: "October 2025",
       active: true,
-      description: `- Enhanced the official contribution hub with modern UI aesthetics.
-- Implemented a gradient-based design language, glassmorphism sidebars, and an accessibility-focused dark/light theme system in the primary navigation.`,
+      description: `- Enhanced the official contribution hub with **modern UI aesthetics**.
+- Implemented a **gradient-based design language**, **glassmorphism sidebars**, and an accessibility-focused **dark/light theme system** in the primary navigation.`,
       technologies: ["Glassmorphism", "CSS Gradients", "Responsive Design"],
       program: "Hacktoberfest '25",
       links: [
@@ -483,8 +562,8 @@ export const DATA = {
       href: "https://github.com/noodles-sed/hacktober-base",
       dates: "October 2025",
       active: true,
-      description: `- Improved cross-page navigation by implementing a smart 'Scroll to Top' component.
-- Features include a dynamic scroll-depth threshold activation, fade-in/out transitions, and smooth scrolling optimization.`,
+      description: `- Improved cross-page navigation by implementing a smart **'Scroll to Top' component**.
+- Features include a dynamic **scroll-depth threshold** activation, **fade-in/out transitions**, and **smooth scrolling optimization**.`,
       technologies: ["JavaScript", "TailwindCSS", "Animation"],
       program: "Hacktoberfest '25",
       links: [
