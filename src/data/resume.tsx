@@ -222,7 +222,7 @@ export const DATA = {
         },
       ],
       image: "",
-      video: "",
+      video: "/project-pothole.mp4",
     },
     {
       title: "AutoSub - AI Subtitles Generator",
