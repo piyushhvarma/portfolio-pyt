@@ -325,7 +325,7 @@ export const DATA = {
       ],
 
       image: "",
-      video: "https://cdn.llm.report/openai-demo.mp4",
+      video: "/medpulse.mp4",
     },
   ],
   contributions: [
