@@ -157,7 +157,7 @@ export const DATA = {
       dates: "April 2026 - May 2026",
       active: true,
       description:
-        "Developed a **high-traffic exam portal** that served **1,850+ unique visitors** and generated **2,900+ page views** within a single 10-day exam window. Engineered a **mobile-first UI** with Next.js 15, Tailwind v4, and a **Three.js neural network background**, reducing seat-finding time from **3 minutes to less than 2 seconds**.",
+        "- Developed a **high-traffic exam portal** serving **1,850+ unique visitors** with **2,900+ page views** in 10 days.\n- Engineered a **mobile-first UI** with Next.js 15, Tailwind v4, and a **Three.js neural network background**.\n- Reduced seat-finding time from **3 minutes to less than 2 seconds** for thousands of students.",
       technologies: [
         "Next.js 15",
         "Tailwind CSS v4",
@@ -185,7 +185,7 @@ export const DATA = {
         },
       ],
       image: "",
-      video: "",
+      video: "/muj-aiml-seating-arrangement.mp4",
     },
     {
       title: "Road Damage Detection",
@@ -193,7 +193,7 @@ export const DATA = {
       dates: "March 2026 - April 2026",
       active: true,
       description:
-        "Built an **end-to-end computer vision pipeline** using a **custom-trained YOLOv8 model** to identify 5 types of road damage from dashcam footage and map them to **interactive GPS coordinates**. Resolved complex **MLOps challenges** including cleaning and merging **10GB of conflicting datasets**, overcoming **GitHub storage limits**, and adjusting confidence thresholds to handle **high-speed motion blur**.",
+        "- Built an **end-to-end CV pipeline** using **YOLOv8** to detect 5 types of road damage from dashcam footage.\n- Mapped detections to **interactive GPS coordinates** for real-time visualization.\n- Resolved **MLOps challenges** including merging **10GB of datasets** and handling **high-speed motion blur**.",
       technologies: [
         "Python",
         "YOLOv8",
@@ -230,7 +230,7 @@ export const DATA = {
       dates: "Jan 2024 - Feb 2024",
       active: true,
       description:
-        "Built an **AI-powered SaaS** platform that automates **video transcription** and **subtitle generation**. Engineered an intuitive dashboard for creators to process videos, customize subtitle styling, and drastically reduce manual editing time while improving **content accessibility**.",
+        "- Built an **AI-powered SaaS** platform for automated **video transcription** and **subtitle generation**.\n- Engineered a dashboard for creators to process videos and **customize subtitle styling**.\n- Drastically reduced manual editing time while significantly improving **content accessibility**.",
       technologies: [
         "Next.js",
         "Typescript",
@@ -267,7 +267,7 @@ export const DATA = {
       dates: "Feb 2026 - March 2026",
       active: true,
       description:
-        "Engineered a **smart recipe generator** that helps users reduce food waste by utilizing ingredients they already have. Leveraged **AI integration** to dynamically generate personalized meals tailored to specific **dietary preferences and nutritional restrictions**.",
+        "- Engineered a **smart recipe generator** to reduce food waste by utilizing existing ingredients.\n- Leveraged **AI integration** to dynamically generate personalized meals.\n- Tailored results to specific **dietary preferences and nutritional restrictions**.",
       technologies: [
         "Next.js",
         "Typescript",
@@ -299,7 +299,7 @@ export const DATA = {
       dates: "April 2023 - September 2023",
       active: true,
       description:
-        "Developed an **AI-driven healthcare assistant** designed to analyze user symptoms and generate preliminary **medical insights**. Integrated advanced **natural language processing** to provide tailored advice, helping users better understand their conditions before consulting professionals.",
+        "- Developed an **AI-driven healthcare assistant** to analyze symptoms and generate **medical insights**.\n- Integrated advanced **Natural Language Processing** to provide tailored health advice.\n- Designed to help users understand their conditions better before consulting professionals.",
       technologies: [
         "Next.js",
         "Typescript",
