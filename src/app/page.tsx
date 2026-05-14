@@ -20,6 +20,7 @@ import { AnimatedSkillBadge } from "@/components/ui/animated-skill-badge";
 // New specialized components
 import { AvatarTrigger } from "@/components/ui/avatar-trigger";
 import ActionBar from "@/components/action-bar";
+import SkillsMarquee from "@/components/skills-marquee";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -117,29 +118,9 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
             <h2 className="text-xl font-bold">Skills</h2>
           </BlurFade>
-          <div className="flex flex-wrap gap-2">
-            {(DATA.skills as unknown as any[]).map((skill, id) => (
-              <BlurFade key={skill.name} delay={BLUR_FADE_DELAY * 5 + id * 0.05}>
-                <div className="border bg-background border-border ring-2 ring-border/20 rounded-xl h-8 w-fit px-4 flex items-center gap-2">
-                  {skill.iconSrc ? (
-                    <img
-                      src={skill.iconSrc}
-                      alt={skill.name}
-                      className="size-4 rounded object-contain drop-shadow-sm"
-                    />
-                  ) : skill.icon ? (
-                    <skill.icon className="size-4 rounded overflow-hidden object-contain" />
-                  ) : null}
-                  <span className="text-foreground text-sm font-medium flex items-start gap-0.5">
-                    {skill.name}
-                    {["Docker", "Kubernetes"].includes(skill.name) && (
-                      <span className="text-[9px] text-muted-foreground font-bold tracking-tighter leading-none h-fit pt-[2px]">L</span>
-                    )}
-                  </span>
-                </div>
-              </BlurFade>
-            ))}
-          </div>
+          <BlurFade delay={BLUR_FADE_DELAY * 4.5}>
+            <SkillsMarquee />
+          </BlurFade>
         </div>
       </section>
 

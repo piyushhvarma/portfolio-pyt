@@ -60,6 +60,7 @@ export const metadata: Metadata = {
 
 import Footer from "@/components/footer";
 import Script from "next/script";
+import PageTransition from "@/components/page-transition";
 
 export default function RootLayout({
   children,
@@ -95,8 +96,10 @@ export default function RootLayout({
                 transition-all duration-500 ease-in-out">
                 {/* Content */}
                 <div className="relative z-10 w-full h-full">
-                  {children}
-                  <Footer />
+                  <PageTransition>
+                    {children}
+                    <Footer />
+                  </PageTransition>
                 </div>
               </div>
             </div>
