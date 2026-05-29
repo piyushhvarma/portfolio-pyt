@@ -1,8 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { motion } from "motion/react";
-import { Quote } from "lucide-react";
 import { MotivationalQuotes } from "@/components/ui/motivational-quotes";
 import { VotingWidget } from "@/components/ui/voting-widget";
 import { fetchStats, handleIncrementViews } from "@/lib/actions";
@@ -19,10 +17,17 @@ export default function SitePulse() {
 
   useEffect(() => {
     const loadStats = async () => {
-      await handleIncrementViews();
-      const stats = await fetchStats();
-      setVisitors(stats.views);
-      setIsInitialLoad(false);
+      try {
+        await handleIncrementViews();
+        const stats = await fetchStats();
+        if (stats && stats.views) {
+          setVisitors(stats.views);
+        }
+      } catch (error) {
+        console.error("Error loading visitor stats:", error);
+      } finally {
+        setIsInitialLoad(false);
+      }
     };
     loadStats();
   }, []);

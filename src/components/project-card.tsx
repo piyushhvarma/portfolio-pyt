@@ -10,6 +10,41 @@ import Markdown from "react-markdown";
 import type { AnimatedIconHandle } from "./ui/svgs/types";
 import React from "react";
 
+function ProjectVideo({ src, className }: { src: string; className?: string }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      // Ensure muted is set on the DOM element directly, which is required for autoplay
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
+      
+      // Attempt to play, catch errors (e.g. browser blocking)
+      const playPromise = videoRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise.catch((error) => {
+          console.warn("Video autoplay failed:", error);
+        });
+      }
+    }
+  }, [src]);
+
+  return (
+    <video
+      ref={videoRef}
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="auto"
+      className={className}
+    >
+      <source src={src} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  );
+}
+
 function ProjectImage({ src, alt }: { src: string; alt: string }) {
   const [imageError, setImageError] = useState(false);
 
@@ -106,12 +141,8 @@ export function ProjectCard({
           className="block"
         >
           {video ? (
-            <video
+            <ProjectVideo
               src={video}
-              autoPlay
-              loop
-              muted
-              playsInline
               className="w-full aspect-video object-cover object-top"
             />
           ) : image ? (

@@ -26,6 +26,32 @@ export const metadata: Metadata = {
     template: `%s | ${DATA.name}`,
   },
   description: DATA.description,
+  keywords: [
+    "piyush varma",
+    "piyush varma murtizapur",
+    "piyush varma akola",
+    "piyush varma jaipur",
+    "piyush varma manipal",
+    "piyush varma muj",
+    "piyush gopal varma",
+    "pyt piyush",
+    "piyushpyt",
+    "piyush gopal varma maharashtra",
+    "Software Engineer",
+    "Web Developer",
+    "AI/ML",
+    "Full Stack Developer"
+  ],
+  authors: [
+    {
+      name: "Piyush Varma",
+      url: DATA.url,
+    },
+  ],
+  creator: "Piyush Varma",
+  alternates: {
+    canonical: DATA.url,
+  },
   openGraph: {
     title: `${DATA.name}`,
     description: DATA.description,
@@ -33,6 +59,14 @@ export const metadata: Metadata = {
     siteName: `${DATA.name}`,
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Piyush Varma - Portfolio",
+      },
+    ],
   },
   robots: {
     index: true,
@@ -48,6 +82,7 @@ export const metadata: Metadata = {
   twitter: {
     title: `${DATA.name}`,
     card: "summary_large_image",
+    images: ["/og.png"],
   },
   verification: {
     google: "",
