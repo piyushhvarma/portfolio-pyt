@@ -102,9 +102,52 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": `${DATA.url}/#website`,
+        url: DATA.url,
+        name: DATA.name,
+        description: DATA.description,
+        publisher: {
+          "@id": `${DATA.url}/#person`,
+        },
+      },
+      {
+        "@type": "Person",
+        "@id": `${DATA.url}/#person`,
+        name: DATA.name,
+        url: DATA.url,
+        image: `${DATA.url}${DATA.avatarUrl}`,
+        sameAs: [
+          DATA.contact.social.GitHub.url,
+          DATA.contact.social.LinkedIn.url,
+          DATA.contact.social.X.url,
+        ].filter(Boolean),
+        jobTitle: "Software Engineer",
+        homeLocation: [
+          {
+            "@type": "Place",
+            name: "Jaipur, Rajasthan, India",
+          },
+          {
+            "@type": "Place",
+            name: "Murtizapur, Akola, Maharashtra, India",
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Script
           defer
           src="https://cloud.umami.is/script.js"
