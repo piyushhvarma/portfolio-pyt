@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ModeToggle } from "@/components/mode-toggle";
+import SkyToggle from "@/components/ui/sky-toggle";
 import { DATA } from "@/data/resume";
 import { HyperText } from "@/components/ui/hyper-text";
 
@@ -64,7 +64,7 @@ export default function Navbar() {
 
       {/* Floating Dark Mode Toggle at Top Right */}
       <div className="fixed top-4 right-4 z-[110]">
-        <ModeToggle />
+        <SkyToggle />
       </div>
     </>
   );
