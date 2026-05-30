@@ -20,7 +20,7 @@ import { AnimatedSkillBadge } from "@/components/ui/animated-skill-badge";
 // New specialized components
 import { AvatarTrigger } from "@/components/ui/avatar-trigger";
 import ActionBar from "@/components/action-bar";
-import SkillsMarquee from "@/components/skills-marquee";
+import SkillsSection from "@/components/skills-section";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -43,7 +43,7 @@ export default function Page() {
                     </h1>
                     <span className="inline-flex w-fit items-center gap-2 rounded-full border border-border/40 bg-zinc-900/5 dark:bg-white/5 backdrop-blur-md px-3 py-1 text-xs sm:text-sm font-medium text-muted-foreground ring-1 ring-inset ring-white/10 mt-1 sm:mt-0">
                       <span className="size-2 rounded-full bg-green-500"></span>
-                      Open to work
+                      Open to full-stack / AI roles
                     </span>
                   </div>
                 </BlurFade>
@@ -119,7 +119,7 @@ export default function Page() {
             <h2 className="text-xl font-bold">Skills</h2>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 4.5}>
-            <SkillsMarquee />
+            <SkillsSection />
           </BlurFade>
         </div>
       </section>

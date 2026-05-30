@@ -23,30 +23,27 @@ export const DATA = {
   summary:
     "I am a Computer Science student at Manipal University Jaipur with a strong focus on AI/ML and building high-performance web products. Recently, I completed GSSoC 2025 as an Open Source Contributor, where I delivered 9 impactful pull requests across 8 different repositories. I thrive on bridging the gap between complex backend logic and pixel-perfect, accessible user interfaces.",
   avatarUrl: "/me.png",
-  skills: [
-    { name: "React", icon: ReactLight },
-    { name: "Next.js", icon: NextjsIconDark },
-    { name: "Vue.js", icon: Icons.vue },
-    { name: "Typescript", icon: Typescript },
-    { name: "JavaScript", icon: Code2, iconSrc: "/icons/javascript.png" },
-    { name: "Node.js", icon: Nodejs },
-    { name: "Python", icon: Python },
-    { name: "C++", icon: Code2, iconSrc: "/icons/c++.png" },
-    { name: "MongoDB", icon: Code2, iconSrc: "/icons/mongo-db.png" },
-    { name: "Postgres", icon: Postgresql },
-    { name: "Docker", icon: Docker },
-    { name: "Kubernetes", icon: Kubernetes },
-    { name: "Git", icon: Icons.git },
-    { name: "GitHub", icon: Icons.github },
-    { name: "CSS", icon: Icons.css },
-    { name: "Tailwind CSS", icon: Tailwind },
-    { name: "Gen AI", icon: Icons.genai },
-    { name: "Machine Learning", icon: Icons.machinelearning },
-    { name: "Computer Vision", icon: Icons.computervision },
-    { name: "WordPress", icon: Icons.wordpress },
-    { name: "Shopify", icon: Icons.shopify },
-    { name: "Wix", icon: Icons.wix },
-  ],
+  skills: {
+    Languages: [
+      { name: "C++", icon: Code2, iconSrc: "/icons/c++.png" },
+      { name: "Python", icon: Python },
+      { name: "TypeScript", icon: Typescript },
+    ],
+    Frontend: [
+      { name: "React", icon: ReactLight },
+      { name: "Next.js", icon: NextjsIconDark },
+    ],
+    Backend: [
+      { name: "Node.js", icon: Nodejs },
+      { name: "Express", icon: Code2 },
+      { name: "PostgreSQL", icon: Postgresql },
+      { name: "MongoDB", icon: Code2, iconSrc: "/icons/mongo-db.png" },
+    ],
+    "AI/ML": [
+      { name: "OpenCV", icon: Eye },
+      { name: "YOLOv8", icon: Eye },
+    ],
+  },
   learning: [
     "Distributed Systems",
     "Large Language Models (LLMs) & Fine-tuning",
@@ -77,7 +74,7 @@ export const DATA = {
       },
       X: {
         name: "X",
-        url: "",
+        url: "https://x.com/piyushhvarmapyt",
         icon: Icons.x,
 
         navbar: true,

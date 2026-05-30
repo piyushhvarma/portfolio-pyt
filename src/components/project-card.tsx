@@ -80,7 +80,7 @@ interface Props {
   className?: string;
 }
 
-function ProjectLink({ link }: { link: any }) {
+export function ProjectLink({ link }: { link: any }) {
   const iconRef = useRef<AnimatedIconHandle>(null);
 
   return (
