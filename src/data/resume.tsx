@@ -227,7 +227,7 @@ export const DATA = {
       dates: "Jan 2024 - Feb 2024",
       active: true,
       description:
-        "- Built an **AI-powered SaaS** platform for automated **video transcription** and **subtitle generation**.\n- Engineered a dashboard for creators to process videos and **customize subtitle styling**.\n- Drastically reduced manual editing time while significantly improving **content accessibility**.",
+        "- Built an **AI-powered SaaS** platform for automated **video transcription** and **subtitle generation**.\n- Pioneered **Hinglish subtitle generation**, pivoting from traditional Devanagari to Romanized Hinglish (e.g., *'bhai kya code likha hai'* instead of *'भाई क्या कोड*'*) to match modern creator aesthetics.\n- Engineered a dashboard for creators to process videos, drastically reducing manual editing time.",
       technologies: [
         "Next.js",
         "Typescript",

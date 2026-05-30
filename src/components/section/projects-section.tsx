@@ -1,3 +1,5 @@
+"use client";
+
 import BlurFade from "@/components/magicui/blur-fade";
 import { ProjectCard, ProjectLink } from "@/components/project-card";
 import { DATA } from "@/data/resume";
@@ -6,6 +8,8 @@ import Markdown from "react-markdown";
 import { ArrowUpRight, ChevronDown } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import VinylIcon from "@/components/ui/svgs/vinylIcon";
+import type { AnimatedIconHandle } from "@/components/ui/svgs/types";
+import { useState, useRef, useEffect } from "react";
 import {
     Accordion,
     AccordionContent,
@@ -18,6 +22,18 @@ const BLUR_FADE_DELAY = 0.04;
 export default function ProjectsSection() {
     const featuredProjects = DATA.projects.slice(0, 3);
     const otherProjects = DATA.projects.slice(3);
+
+    const vinylRef = useRef<AnimatedIconHandle>(null);
+    const [isHovered, setIsHovered] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+
+    useEffect(() => {
+        if (isHovered || isOpen) {
+            vinylRef.current?.startAnimation?.();
+        } else {
+            vinylRef.current?.stopAnimation?.();
+        }
+    }, [isHovered, isOpen]);
 
     return (
         <section id="projects">
@@ -63,13 +79,17 @@ export default function ProjectsSection() {
 
                 {otherProjects.length > 0 && (
                     <div className="w-full max-w-[800px] mx-auto mt-6">
-                        <Accordion type="single" collapsible className="w-full">
+                        <Accordion type="single" collapsible className="w-full" onValueChange={(val) => setIsOpen(val === "more-projects")}>
                             <AccordionItem value="more-projects" className="border border-white/10 rounded-3xl px-4 py-2 bg-white/5 dark:bg-white/[0.03] backdrop-blur-xl shadow-2xl shadow-black/20 overflow-hidden transition-all hover:bg-white/10 dark:hover:bg-white/[0.05]">
-                                <AccordionTrigger className="hover:no-underline py-4 group">
+                                <AccordionTrigger 
+                                    className="hover:no-underline py-4 group"
+                                    onMouseEnter={() => setIsHovered(true)}
+                                    onMouseLeave={() => setIsHovered(false)}
+                                >
                                     <div className="flex items-center justify-between w-full pr-4">
                                         <div className="flex items-center gap-4">
                                             <div className="size-10 md:size-12 p-1 border rounded-2xl shadow ring-1 ring-border bg-muted flex items-center justify-center flex-none">
-                                                <VinylIcon className="size-5 md:size-6 text-muted-foreground" />
+                                                <VinylIcon ref={vinylRef} className="size-5 md:size-6 text-muted-foreground" />
                                             </div>
                                             <div className="flex flex-col items-start gap-0.5">
                                                 <span className="text-xl font-bold tracking-tight text-zinc-900 dark:bg-linear-to-br dark:from-white dark:to-white/60 dark:bg-clip-text dark:text-transparent">Explore More Projects</span>
