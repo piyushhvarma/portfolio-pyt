@@ -5,7 +5,7 @@ import Text3DFlip from "@/components/ui/text-3d-flip";
 
 const TITLES = [
   "Full Stack Developer",
-  "Entrepreneur",
+  "SDE",
   "Open Source Contributor"
 ];
 

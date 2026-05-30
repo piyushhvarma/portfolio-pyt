@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="mt-12 py-12 border-t border-border/40 flex flex-col items-center justify-center gap-4">
       <SitePulse />
       <p className="text-xs text-muted-foreground text-center">
-        Built with Next.js & Tailwind. Optimized for Accessibility & Performance.
+        fueled with coffee and a deep fear of unoptimized code and procrastination
       </p>
     </footer>
   );
