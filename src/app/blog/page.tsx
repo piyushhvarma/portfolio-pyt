@@ -44,7 +44,7 @@ export default function BlogPage() {
           {posts.map((post, id) => (
             <BlurFade delay={BLUR_FADE_DELAY * 2 + id * 0.05} key={post._meta.path}>
               <Link
-                className="flex flex-col gap-2 p-4 -mx-4 hover:bg-accent/50 rounded-xl transition-colors"
+                className="flex flex-col gap-2 p-4 -mx-4 active:bg-accent/50 sm:hover:bg-accent/50 rounded-xl transition-colors"
                 href={`/blog/${post._meta.path.replace(/\.mdx$/, "")}`}
               >
                 <div className="flex flex-col w-full">

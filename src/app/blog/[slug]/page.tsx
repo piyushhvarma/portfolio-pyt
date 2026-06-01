@@ -156,7 +156,7 @@ export default async function Blog({
           {previousPost ? (
             <Link
               href={`/blog/${getSlug(previousPost)}`}
-              className="group flex-1 flex flex-col gap-1 p-4 rounded-lg border border-border hover:bg-accent/50 transition-colors"
+              className="group flex-1 flex flex-col gap-1 p-4 rounded-lg border border-border active:bg-accent/50 sm:hover:bg-accent/50 transition-colors"
             >
               <span className="flex items-center gap-1 text-xs text-muted-foreground">
                 <ChevronLeft className="size-3" />
@@ -173,7 +173,7 @@ export default async function Blog({
           {nextPost ? (
             <Link
               href={`/blog/${getSlug(nextPost)}`}
-              className="group flex-1 flex flex-col gap-1 p-4 rounded-lg border border-border hover:bg-accent/50 transition-colors text-right"
+              className="group flex-1 flex flex-col gap-1 p-4 rounded-lg border border-border active:bg-accent/50 sm:hover:bg-accent/50 transition-colors text-right"
             >
               <span className="flex items-center justify-end gap-1 text-xs text-muted-foreground">
                 Next
