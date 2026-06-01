@@ -11,6 +11,7 @@ import {
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
+import Image from "next/image";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -25,9 +26,11 @@ function LogoImage({ src, alt, srcDark }: { src: string; alt: string; srcDark?: 
 
     return (
         <div className="relative size-10 md:size-12 flex-none">
-            <img
+            <Image
                 src={src}
                 alt={alt}
+                width={48}
+                height={48}
                 className={cn(
                     "size-full p-1 border rounded-2xl shadow ring-1 ring-border overflow-hidden object-contain bg-white/5",
                     srcDark ? "dark:hidden" : ""
@@ -35,9 +38,11 @@ function LogoImage({ src, alt, srcDark }: { src: string; alt: string; srcDark?: 
                 onError={() => setImageError(true)}
             />
             {srcDark && (
-                <img
+                <Image
                     src={srcDark}
                     alt={alt}
+                    width={48}
+                    height={48}
                     className="size-full p-1 border rounded-2xl shadow ring-1 ring-border overflow-hidden object-contain bg-white/5 hidden dark:block"
                     onError={() => setImageError(true)}
                 />

@@ -2,6 +2,7 @@
 
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 function SkillBadge({
   skill,
@@ -14,10 +15,11 @@ function SkillBadge({
   return (
     <div className="border bg-background border-border ring-1 ring-border/20 rounded-lg h-8 w-fit px-3 flex items-center gap-2 shrink-0 select-none">
       {iconSrc ? (
-        /* eslint-disable-next-line @next/next/no-img-element */
-        <img
+        <Image
           src={iconSrc}
           alt={skill.name}
+          width={14}
+          height={14}
           className="size-3.5 rounded object-contain drop-shadow-sm"
         />
       ) : Icon ? (

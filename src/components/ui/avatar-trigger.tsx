@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export function AvatarTrigger() {
   const toggleAdmin = () => {
@@ -15,8 +16,8 @@ export function AvatarTrigger() {
       onDoubleClick={toggleAdmin} 
       className="relative size-20 md:size-24 rounded-3xl overflow-hidden border bg-background shadow-sm ring-1 ring-border/50 group flex-shrink-0 cursor-pointer select-none"
     >
-      <img src="/pyt2.png" alt="Avatar" className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0" />
-      <img src="/pyt1.png" alt="Avatar Variant" className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+      <Image src="/pyt2.png" alt="Avatar" width={96} height={96} className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0" />
+      <Image src="/pyt1.png" alt="Avatar Variant" width={96} height={96} className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
     </div>
   );
 }

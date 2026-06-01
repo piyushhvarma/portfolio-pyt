@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { Badge } from "@/components/ui/badge";
@@ -9,6 +8,7 @@ import { useState, useRef, useEffect } from "react";
 import Markdown from "react-markdown";
 import type { AnimatedIconHandle } from "./ui/svgs/types";
 import React from "react";
+import Image from "next/image";
 
 function ProjectVideo({ src, className }: { src: string; className?: string }) {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -53,9 +53,11 @@ function ProjectImage({ src, alt }: { src: string; alt: string }) {
   }
 
   return (
-    <img
+    <Image
       src={src}
       alt={alt}
+      width={600}
+      height={400}
       className="w-full aspect-video object-cover object-top"
       onError={() => setImageError(true)}
     />

@@ -1,6 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import Markdown from "react-markdown";
 import {
   Accordion,
@@ -23,9 +23,11 @@ function LogoImage({ src, alt, srcDark }: { src: string; alt: string; srcDark?: 
 
   return (
     <>
-      <img
+      <Image
         src={src}
         alt={alt}
+        width={40}
+        height={40}
         className={cn(
           "size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border overflow-hidden object-contain flex-none",
           srcDark ? "dark:hidden" : ""
@@ -33,9 +35,11 @@ function LogoImage({ src, alt, srcDark }: { src: string; alt: string; srcDark?: 
         onError={() => setImageError(true)}
       />
       {srcDark && (
-        <img
+        <Image
           src={srcDark}
           alt={alt}
+          width={40}
+          height={40}
           className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border overflow-hidden object-contain flex-none hidden dark:block"
           onError={() => setImageError(true)}
         />

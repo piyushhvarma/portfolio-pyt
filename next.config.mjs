@@ -28,6 +28,15 @@ const nextConfig = {
       },
     ];
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "pub-83c5db439b40468498f97946200806f7.r2.dev",
+        pathname: "/**",
+      },
+    ],
+  },
 };
 
 // withContentCollections must be the outermost plugin
