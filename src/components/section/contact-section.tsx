@@ -10,19 +10,19 @@ export default function ContactSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-start">
         {/* Left Column: Contact Methods */}
         <div className="flex flex-col gap-6">
-          <div className="flex flex-col gap-2">
-            <h2 className="text-xl font-bold text-foreground">
+          <div className="flex flex-col gap-3">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-foreground">
               Get in Touch
             </h2>
-            <p className="text-sm text-muted-foreground text-balance">
+            <p className="text-muted-foreground text-balance">
               Choose your preferred method to connect and let&apos;s discuss your project.
             </p>
           </div>
 
           <div className="flex flex-col border border-border/50 rounded-2xl overflow-hidden bg-card/50">
             {/* Schedule a call */}
-            <Link 
-              href="#" 
+            <Link
+              href="#"
               className="flex items-center justify-between p-4 sm:p-5 hover:bg-muted/50 transition-colors border-b border-border/50 group"
             >
               <div className="flex items-center gap-4">
@@ -36,8 +36,8 @@ export default function ContactSection() {
             </Link>
 
             {/* Email */}
-            <Link 
-              href={`mailto:${DATA.contact.email}`} 
+            <Link
+              href={`mailto:${DATA.contact.email}`}
               className="flex items-center justify-between p-4 sm:p-5 hover:bg-muted/50 transition-colors border-b border-border/50 group"
             >
               <div className="flex items-center gap-4">
@@ -51,8 +51,8 @@ export default function ContactSection() {
             </Link>
 
             {/* X / Twitter */}
-            <Link 
-              href={DATA.contact.social.X.url} 
+            <Link
+              href={DATA.contact.social.X.url}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-between p-4 sm:p-5 hover:bg-muted/50 transition-colors border-b border-border/50 group"
@@ -83,11 +83,11 @@ export default function ContactSection() {
 
         {/* Right Column: Contact Form */}
         <div className="flex flex-col gap-6">
-          <div className="flex flex-col gap-2">
-            <h2 className="text-xl font-bold text-foreground">
+          <div className="flex flex-col gap-3">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-foreground">
               Send a Message
             </h2>
-            <p className="text-sm text-muted-foreground text-balance">
+            <p className="text-muted-foreground text-balance">
               Prefer to write? Fill out the form and I&apos;ll get back to you within 24 hours.
             </p>
           </div>
