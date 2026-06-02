@@ -11,37 +11,26 @@ import React from "react";
 import Image from "next/image";
 
 function ProjectVideo({ src, className }: { src: string; className?: string }) {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    if (videoRef.current) {
-      // Ensure muted is set on the DOM element directly, which is required for autoplay
-      videoRef.current.defaultMuted = true;
-      videoRef.current.muted = true;
-
-      // Attempt to play, catch errors (e.g. browser blocking)
-      const playPromise = videoRef.current.play();
-      if (playPromise !== undefined) {
-        playPromise.catch((error) => {
-          console.warn("Video autoplay failed:", error);
-        });
-      }
-    }
-  }, [src]);
-
   return (
-    <video
-      ref={videoRef}
-      autoPlay
-      loop
-      muted
-      playsInline
-      preload="auto"
+    <div
       className={className}
-    >
-      <source src={src} type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+      dangerouslySetInnerHTML={{
+        __html: `
+          <video
+            src="${src}"
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="auto"
+            class="w-full h-full object-cover object-top"
+            style="width: 100%; height: 100%; object-fit: cover; object-position: top;"
+          >
+            Your browser does not support the video tag.
+          </video>
+        `
+      }}
+    />
   );
 }
 

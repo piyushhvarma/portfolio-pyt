@@ -45,7 +45,6 @@ export const DATA = {
     ],
   },
   learning: [
-    "Distributed Systems",
     "Large Language Models (LLMs) & Fine-tuning",
     "System Design for Scalability",
     "Advanced Data Structures & Algorithms",

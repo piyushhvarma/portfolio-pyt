@@ -27,7 +27,7 @@ export default function ActionBar() {
         {/* Main Action Group: Apple-style Glassmorphism */}
         <div className="flex items-center gap-1 rounded-2xl bg-white/[0.01] dark:bg-white/[0.02] p-1 backdrop-blur-md border border-black/[0.05] dark:border-white/[0.08] shadow-[0_4px_12px_-2px_rgba(0,0,0,0.05)] transition-all hover:shadow-[0_8px_20px_-4px_rgba(0,0,0,0.1)]">
           <Link
-            href="/resume.pdf"
+            href="/PiyushhVarma_Resume.pdf"
             target="_blank"
             onMouseEnter={() => {
               resumeIconRef.current?.startAnimation();
