@@ -101,7 +101,7 @@ export const DATA = {
       start: "May 2026",
       end: "Present",
       description:
-        "- Architecting automated data pipelines for competitive market analysis and inventory synchronization using custom Shopify integrations.\n- Optimizing storefront performance and UI/UX through technical refinements to increase conversion rates.\n- Implementing data-driven strategies by visualizing market trends and automating pricing logic to streamline business operations.",
+        "- Architecting **automated data pipelines** for **competitive market analysis** and inventory synchronization using custom **Shopify integrations**.\n- Optimizing **storefront performance** and **UI/UX** through technical refinements to increase **conversion rates**.\n- Implementing **data-driven strategies** by visualizing **market trends** and automating **pricing logic** to streamline business operations.",
     },
     {
       company: "GirlScript Summer of Code (GSSoC)",

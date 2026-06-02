@@ -28,19 +28,23 @@ import {
 } from "lucide-react";
 
 const STACK = [
+  { name: "JavaScript", iconPath: "/icons/JavaScript.svg" },
   { name: "TypeScript", icon: Typescript, isSvg: true },
-  { name: "JavaScript", icon: Braces, isSvg: false, color: "text-yellow-500" },
   { name: "Python", icon: Python, isSvg: true },
+  { name: "C++", iconPath: "/icons/C++ (CPlusPlus).svg" },
   { name: "React", icon: ReactLight, isSvg: true },
   { name: "Next.js", icon: NextjsIconDark, isSvg: true },
+  { name: "Vue.js", iconPath: "/icons/Vue.js.svg" },
+  { name: "Express", iconPath: "/icons/Express.svg" },
   { name: "Tailwind CSS", icon: Tailwind, isSvg: true },
-  { name: "Three.js", icon: Box, isSvg: false, color: "text-foreground" },
+  { name: "Three.js", iconPath: "/icons/Three.js.svg" },
   { name: "Framer Motion", icon: Framer, isSvg: false, color: "text-pink-500" },
   { name: "PostgreSQL", icon: Postgresql, isSvg: true },
   { name: "Prisma", icon: Database, isSvg: false, color: "text-teal-500" },
-  { name: "Cloudflare Workers", icon: Cloud, isSvg: false, color: "text-orange-500" },
-  { name: "Machine Learning", icon: BrainCircuit, isSvg: false, color: "text-purple-500" },
-  { name: "Stripe", icon: CreditCard, isSvg: false, color: "text-indigo-500" },
+  { name: "Cloudflare", iconPath: "/icons/Cloudflare.svg" },
+  { name: "Bun", iconPath: "/icons/Bun.svg" },
+  { name: "OpenCV", iconPath: "/icons/OpenCV.svg" },
+  { name: "Pandas", iconPath: "/icons/Pandas.svg" },
 ];
 
 export default function SkillsSection({ className }: { className?: string }) {
@@ -54,11 +58,17 @@ export default function SkillsSection({ className }: { className?: string }) {
               <Tooltip key={skill.name}>
                 <TooltipTrigger asChild>
                   <div className="group cursor-pointer flex items-center justify-center size-10 rounded-xl hover:bg-muted/50 transition-colors">
-                    {skill.isSvg ? (
+                    {skill.iconPath ? (
+                      <img
+                        src={skill.iconPath}
+                        alt={skill.name}
+                        className="size-7 object-contain drop-shadow-sm transition-transform group-hover:scale-110 select-none pointer-events-none"
+                      />
+                    ) : skill.isSvg && Icon ? (
                       <Icon className="size-7 object-contain drop-shadow-sm transition-transform group-hover:scale-110" />
-                    ) : (
+                    ) : Icon ? (
                       <Icon className={cn("size-6 object-contain transition-transform group-hover:scale-110", skill.color)} />
-                    )}
+                    ) : null}
                   </div>
                 </TooltipTrigger>
                 <TooltipContent
