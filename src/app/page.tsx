@@ -61,14 +61,14 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
             <div className="flex flex-col gap-4 text-base font-sans leading-relaxed text-muted-foreground">
               <p>
-                Building interactive web apps with{" "}
+                Aspiring Software Engineer and product builder passionate about AI, UI/UX, and problem-solving. I love creating web apps that people actually use, sharing insights online, and learning openly along the journey.
+              </p>
+              <p>
+                Currently focused on building interactive applications with{" "}
                 <Link href="https://www.typescriptlang.org/" target="_blank" className="font-medium text-foreground transition-colors hover:text-[#3178C6]">TypeScript</Link>,{" "}
                 <Link href="https://react.dev/" target="_blank" className="font-medium text-foreground transition-colors hover:text-[#61DAFB]">React</Link>,{" "}
                 <Link href="https://nextjs.org/" target="_blank" className="font-medium text-foreground transition-colors hover:text-black dark:hover:text-white">Next.js</Link>, and{" "}
-                <Link href="https://tailwindcss.com/" target="_blank" className="font-medium text-foreground transition-colors hover:text-[#38B2AC]">Tailwind CSS</Link>.
-              </p>
-              <p>
-                Focused on UI/UX, learning DSA and system design, and growing towards building something of my own.
+                <Link href="https://tailwindcss.com/" target="_blank" className="font-medium text-foreground transition-colors hover:text-[#38B2AC]">Tailwind CSS</Link>, while strengthening my foundation in DSA and system design.
               </p>
             </div>
           </BlurFade>
