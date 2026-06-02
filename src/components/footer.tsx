@@ -3,7 +3,7 @@ import SitePulse from "./site-pulse";
 
 export default function Footer() {
   return (
-    <footer className="mt-12 py-12 border-t border-border/40 flex flex-col items-center justify-center gap-4">
+    <footer className="mt-6 py-6 border-t border-border/40 flex flex-col items-center justify-center gap-4">
       <SitePulse />
       <p className="text-xs text-muted-foreground text-center">
         fueled with coffee and a deep fear of unoptimized code and procrastination

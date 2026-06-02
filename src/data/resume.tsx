@@ -56,6 +56,7 @@ export const DATA = {
   contact: {
     email: "pytworks@gmail.com",
     tel: "+91 8999257783",
+    cal: "https://cal.com/piyushhvarma/30min",
     social: {
       GitHub: {
         name: "GitHub",

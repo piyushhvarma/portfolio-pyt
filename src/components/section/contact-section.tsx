@@ -22,7 +22,9 @@ export default function ContactSection() {
           <div className="flex flex-col border border-border/50 rounded-2xl overflow-hidden bg-card/50">
             {/* Schedule a call */}
             <Link
-              href="#"
+              href={DATA.contact.cal}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-between p-4 sm:p-5 hover:bg-muted/50 transition-colors border-b border-border/50 group"
             >
               <div className="flex items-center gap-4">
