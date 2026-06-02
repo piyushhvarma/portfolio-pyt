@@ -5,8 +5,9 @@ import Text3DFlip from "@/components/ui/text-3d-flip";
 
 const TITLES = [
   "Full Stack Developer",
-  "SDE",
-  "Open Source Contributor"
+  "Aspiring Software Developer",
+  "Open Source Contributor",
+  "Freelancer"
 ];
 
 export default function HeroTitleLoop() {
@@ -21,7 +22,7 @@ export default function HeroTitleLoop() {
 
   return (
     <Text3DFlip
-      className="text-muted-foreground font-mono text-sm sm:text-base font-medium flex items-center justify-start h-[1lh]"
+      className="text-muted-foreground font-sans text-sm sm:text-base font-medium flex items-center justify-start h-[1lh]"
       staggerDuration={0.03}
       rotateDirection="top"
     >

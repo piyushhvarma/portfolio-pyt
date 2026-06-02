@@ -59,34 +59,16 @@ export default function Page() {
 
         <section id="summary">
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
-            <div className="prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
+            <div className="flex flex-col gap-4 text-base font-sans leading-relaxed text-muted-foreground">
               <p>
                 Building interactive web apps with{" "}
-                <AnimatedSkillBadge
-                  Icon={TypescriptIcon}
-                  text="TypeScript"
-                  className="bg-blue-500/10 text-blue-500 border-blue-500/20"
-                  iconClassName="text-blue-500"
-                />
-                {" "}
-                <AnimatedSkillBadge
-                  Icon={BrandReactIcon}
-                  text="React"
-                  className="bg-cyan-500/10 text-cyan-500 border-cyan-500/20"
-                  iconClassName="text-cyan-500"
-                />
-                {" "}
-                <AnimatedSkillBadge
-                  Icon={BrandNextjsIcon}
-                  text="Next.js"
-                  className="bg-zinc-800 text-white border-zinc-700 dark:bg-white/10 dark:text-white dark:border-white/20"
-                  iconClassName="text-white"
-                />
-                {" and "}
-                <span className="inline-flex items-center gap-1 rounded bg-teal-500/10 px-1.5 py-0.5 text-sm font-medium text-teal-500 border border-teal-500/20">
-                  <Tailwind className="size-3.5" /> Tailwind CSS
-                </span>
-                . Focused on UI/UX learning DSA and system design and growing towards building something of my own.
+                <Link href="https://www.typescriptlang.org/" target="_blank" className="font-medium text-foreground transition-colors hover:text-[#3178C6]">TypeScript</Link>,{" "}
+                <Link href="https://react.dev/" target="_blank" className="font-medium text-foreground transition-colors hover:text-[#61DAFB]">React</Link>,{" "}
+                <Link href="https://nextjs.org/" target="_blank" className="font-medium text-foreground transition-colors hover:text-black dark:hover:text-white">Next.js</Link>, and{" "}
+                <Link href="https://tailwindcss.com/" target="_blank" className="font-medium text-foreground transition-colors hover:text-[#38B2AC]">Tailwind CSS</Link>.
+              </p>
+              <p>
+                Focused on UI/UX, learning DSA and system design, and growing towards building something of my own.
               </p>
             </div>
           </BlurFade>

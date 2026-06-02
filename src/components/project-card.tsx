@@ -12,14 +12,33 @@ import Image from "next/image";
 
 function ProjectVideo({ src, className }: { src: string; className?: string }) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [isInView, setIsInView] = useState(false);
 
   useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsInView(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { rootMargin: "200px" }
+    );
+
     if (videoRef.current) {
-      // Ensure muted is set on the DOM element directly, which is required for autoplay
+      observer.observe(videoRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (isInView && videoRef.current) {
       videoRef.current.defaultMuted = true;
       videoRef.current.muted = true;
       
-      // Attempt to play, catch errors (e.g. browser blocking)
       const playPromise = videoRef.current.play();
       if (playPromise !== undefined) {
         playPromise.catch((error) => {
@@ -27,19 +46,18 @@ function ProjectVideo({ src, className }: { src: string; className?: string }) {
         });
       }
     }
-  }, [src]);
+  }, [isInView, src]);
 
   return (
     <video
       ref={videoRef}
-      autoPlay
       loop
       muted
       playsInline
-      preload="auto"
+      preload="none"
       className={className}
     >
-      <source src={src} type="video/mp4" />
+      {isInView && <source src={src} type="video/mp4" />}
       Your browser does not support the video tag.
     </video>
   );
