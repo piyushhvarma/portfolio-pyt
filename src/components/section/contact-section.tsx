@@ -10,11 +10,11 @@ export default function ContactSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-start">
         {/* Left Column: Contact Methods */}
         <div className="flex flex-col gap-6">
-          <div className="flex flex-col gap-3">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-foreground">
+          <div className="flex flex-col gap-2">
+            <h2 className="text-xl font-bold text-foreground">
               Get in Touch
             </h2>
-            <p className="text-muted-foreground text-balance">
+            <p className="text-sm text-muted-foreground text-balance">
               Choose your preferred method to connect and let&apos;s discuss your project.
             </p>
           </div>
@@ -83,11 +83,11 @@ export default function ContactSection() {
 
         {/* Right Column: Contact Form */}
         <div className="flex flex-col gap-6">
-          <div className="flex flex-col gap-3">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-foreground">
+          <div className="flex flex-col gap-2">
+            <h2 className="text-xl font-bold text-foreground">
               Send a Message
             </h2>
-            <p className="text-muted-foreground text-balance">
+            <p className="text-sm text-muted-foreground text-balance">
               Prefer to write? Fill out the form and I&apos;ll get back to you within 24 hours.
             </p>
           </div>

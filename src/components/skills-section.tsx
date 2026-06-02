@@ -1,12 +1,12 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { 
-  Tooltip, 
-  TooltipContent, 
-  TooltipProvider, 
-  TooltipTrigger, 
-  TooltipArrow 
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+  TooltipArrow
 } from "@/components/ui/tooltip";
 
 import { Typescript } from "@/components/ui/svgs/typescript";
@@ -17,10 +17,10 @@ import { Python } from "@/components/ui/svgs/python";
 import { Postgresql } from "@/components/ui/svgs/postgresql";
 
 // Generic lucide icons for missing SVGs
-import { 
-  Database, 
-  Cloud, 
-  BrainCircuit, 
+import {
+  Database,
+  Cloud,
+  BrainCircuit,
   CreditCard,
   Framer,
   Box,
@@ -61,9 +61,9 @@ export default function SkillsSection({ className }: { className?: string }) {
                     )}
                   </div>
                 </TooltipTrigger>
-                <TooltipContent 
-                  side="top" 
-                  sideOffset={12} 
+                <TooltipContent
+                  side="top"
+                  sideOffset={12}
                   className="bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold text-xs rounded-lg px-3 py-1.5 shadow-xl border-none"
                 >
                   {skill.name}

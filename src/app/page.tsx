@@ -34,7 +34,7 @@ export default function Page() {
               <BlurFade delay={BLUR_FADE_DELAY}>
                 <AvatarTrigger />
               </BlurFade>
-              
+
               <div className="flex flex-col gap-2 w-full">
                 <BlurFade delay={BLUR_FADE_DELAY} yOffset={8}>
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 w-full">

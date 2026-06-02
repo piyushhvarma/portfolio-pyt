@@ -12,33 +12,14 @@ import Image from "next/image";
 
 function ProjectVideo({ src, className }: { src: string; className?: string }) {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isInView, setIsInView] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsInView(true);
-            observer.disconnect();
-          }
-        });
-      },
-      { rootMargin: "200px" }
-    );
-
     if (videoRef.current) {
-      observer.observe(videoRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (isInView && videoRef.current) {
+      // Ensure muted is set on the DOM element directly, which is required for autoplay
       videoRef.current.defaultMuted = true;
       videoRef.current.muted = true;
-      
+
+      // Attempt to play, catch errors (e.g. browser blocking)
       const playPromise = videoRef.current.play();
       if (playPromise !== undefined) {
         playPromise.catch((error) => {
@@ -46,18 +27,19 @@ function ProjectVideo({ src, className }: { src: string; className?: string }) {
         });
       }
     }
-  }, [isInView, src]);
+  }, [src]);
 
   return (
     <video
       ref={videoRef}
+      autoPlay
       loop
       muted
       playsInline
-      preload="none"
+      preload="auto"
       className={className}
     >
-      {isInView && <source src={src} type="video/mp4" />}
+      <source src={src} type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   );
@@ -121,8 +103,8 @@ export function ProjectLink({ link }: { link: any }) {
       >
         {React.isValidElement(link.icon)
           ? React.cloneElement(link.icon as React.ReactElement<any>, {
-              ref: iconRef,
-            })
+            ref: iconRef,
+          })
           : link.icon}
         {link.type}
       </Badge>
@@ -200,7 +182,7 @@ export function ProjectCard({
         <div className="text-xs flex-1 prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
           <Markdown>{description}</Markdown>
         </div>
-        
+
         {otherLinks && otherLinks.length > 0 && (
           <div className="flex flex-wrap gap-2">
             {otherLinks.map((link, idx) => (
