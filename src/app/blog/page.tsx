@@ -1,7 +1,7 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { allPosts } from "content-collections";
 import Link from "next/link";
-import { formatDate } from "@/lib/utils";
+import { formatDate, readingTime } from "@/lib/utils";
 
 export const metadata = {
   title: "Blog & Case Studies",
@@ -51,6 +51,8 @@ export default function BlogPage() {
                   <h2 className="text-lg font-semibold tracking-tight">{post.title}</h2>
                   <p className="text-xs text-muted-foreground mb-2">
                     {formatDate(post.publishedAt)}
+                    <span className="mx-1.5 text-muted-foreground/40">·</span>
+                    {readingTime(post.content)}
                   </p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     {post.summary}

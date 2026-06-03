@@ -15,3 +15,21 @@ export function formatDate(date: string | Date) {
     timeZone: "UTC",
   });
 }
+
+/**
+ * Calculates estimated reading time for a given text.
+ * Strips markdown syntax before counting to avoid skewing word count.
+ * Uses 200 wpm — appropriate for technical/long-form content.
+ */
+export function readingTime(text: string): string {
+  const cleaned = text
+    .replace(/```[\s\S]*?```/g, "") // remove code blocks
+    .replace(/`[^`]*`/g, "")        // remove inline code
+    .replace(/#{1,6}\s/g, "")       // remove heading markers
+    .replace(/[*_~>[\]()!]/g, "")   // remove markdown symbols
+    .replace(/https?:\/\/\S+/g, ""); // remove URLs
+
+  const words = cleaned.trim().split(/\s+/).filter(Boolean).length;
+  const minutes = Math.max(1, Math.ceil(words / 200));
+  return `${minutes} min read`;
+}

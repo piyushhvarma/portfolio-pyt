@@ -1,5 +1,5 @@
 import { allPosts } from "content-collections";
-import { formatDate } from "@/lib/utils";
+import { formatDate, readingTime } from "@/lib/utils";
 import { DATA } from "@/data/resume";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -132,8 +132,10 @@ export default async function Blog({
         <h1 className="title font-semibold text-3xl md:text-4xl tracking-tighter leading-tight">
           {post.title}
         </h1>
-        <p className="text-sm text-muted-foreground">
+        <p className="text-sm text-muted-foreground flex items-center gap-1.5">
           {formatDate(post.publishedAt)}
+          <span className="text-muted-foreground/40">·</span>
+          {readingTime(post.content)}
         </p>
       </div>
       <div className="my-6 flex w-full items-center">

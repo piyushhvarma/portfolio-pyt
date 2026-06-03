@@ -98,6 +98,7 @@ export const metadata: Metadata = {
 import Footer from "@/components/footer";
 import Script from "next/script";
 import PageTransition from "@/components/page-transition";
+import ScrollProgress from "@/components/scroll-progress";
 
 export default function RootLayout({
   children,
@@ -164,6 +165,7 @@ export default function RootLayout({
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="light">
+          <ScrollProgress />
           <TooltipProvider delayDuration={0}>
             <Navbar />
             <div className="relative z-10 max-w-3xl mx-auto py-6 pb-24 sm:py-12 px-4 sm:px-6">
