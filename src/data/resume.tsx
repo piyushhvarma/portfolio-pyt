@@ -102,7 +102,7 @@ export const DATA = {
       start: "May 2026",
       end: "Present",
       description:
-        "Building tools and automations for Silveransh, a D2C e-commerce brand, working across the full stack from Shopify integrations to frontend performance.\n- Automated competitive pricing and inventory sync pipelines across Shopify stores.\n- Improved storefront UI/UX, contributing to measurable gains in conversion rate.\n- Built market trend dashboards to surface insights and drive pricing decisions.",
+        "Silveransh is a D2C e-commerce brand. Building full-stack tools and automations — from Shopify integrations to storefront performance improvements.\n- Automated competitive pricing and inventory sync pipelines across Shopify stores.\n- Improved storefront UI/UX, contributing to measurable gains in conversion rate.\n- Built market trend dashboards to surface insights and drive pricing decisions.",
       technologies: ["Shopify", "React", "Next.js", "Tailwind CSS", "Python"],
     },
     {
