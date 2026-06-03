@@ -107,43 +107,33 @@ export function ProjectCard({
   const caseStudyLink = links?.find((link) => link.type === "Case Study");
   const otherLinks = links?.filter((link) => link.type !== "Case Study");
 
+  const openHref = () => {
+    if (href) window.open(href, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <div
       className={cn(
         "flex flex-col h-full border border-border rounded-xl overflow-hidden hover:ring-2 cursor-pointer hover:ring-muted transition-all duration-200 group relative",
         className
       )}
+      onClick={openHref}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => e.key === "Enter" && openHref()}
     >
-      {/*
-       * Thumbnail area — video/image is NOT inside <Link>.
-       * iOS Safari hijacks taps on videos inside <a> tags and silently
-       * blocks autoplay. Instead we use an absolute transparent overlay
-       * link so the video element is always a direct child of a plain div.
-       */}
+      {/* Thumbnail — video is fully unobstructed, no overlay */}
       <div className="relative shrink-0">
         {video ? (
-          <ProjectVideo
-            src={video}
-            className="w-full aspect-video"
-          />
+          <ProjectVideo src={video} className="w-full aspect-video" />
         ) : image ? (
           <ProjectImage src={image} alt={title} />
         ) : (
           <div className="w-full aspect-video bg-muted" />
         )}
 
-        {/* Invisible navigation overlay — sits above media, below badge */}
-        <Link
-          href={href || "#"}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="absolute inset-0 z-[1]"
-          aria-label={`Open ${title}`}
-          tabIndex={-1}
-        />
-
         {caseStudyLink && (
-          <div className="absolute top-3 right-3 z-10">
+          <div className="absolute top-3 right-3 z-10" onClick={(e) => e.stopPropagation()}>
             <ProjectLink link={caseStudyLink} />
           </div>
         )}
@@ -151,7 +141,12 @@ export function ProjectCard({
       <div className="p-6 flex flex-col gap-3 flex-1">
         <div className="flex items-start justify-between gap-2">
           <div className="flex flex-col gap-1">
-            <Link href={href || "#"} target="_blank" rel="noopener noreferrer">
+            <Link
+              href={href || "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+            >
               <h3 className="font-semibold hover:underline decoration-muted-foreground/30 underline-offset-4">
                 {title}
               </h3>
@@ -164,6 +159,7 @@ export function ProjectCard({
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
             aria-label={`Open ${title}`}
+            onClick={(e) => e.stopPropagation()}
           >
             <ArrowUpRight className="h-4 w-4" aria-hidden />
           </Link>
@@ -173,7 +169,7 @@ export function ProjectCard({
         </div>
 
         {otherLinks && otherLinks.length > 0 && (
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2" onClick={(e) => e.stopPropagation()}>
             {otherLinks.map((link, idx) => (
               <ProjectLink key={idx} link={link} />
             ))}
