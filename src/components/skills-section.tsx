@@ -31,7 +31,7 @@ const STACK = [
   { name: "JavaScript", iconPath: "/icons/JavaScript.svg" },
   { name: "TypeScript", icon: Typescript, isSvg: true },
   { name: "Python", icon: Python, isSvg: true },
-  { name: "C++", iconPath: "/icons/C++ (CPlusPlus).svg" },
+  { name: "C++", iconPath: "/icons/cpp.svg" },
   { name: "React", icon: ReactLight, isSvg: true },
   { name: "Next.js", icon: NextjsIconDark, isSvg: true },
   { name: "Vue.js", iconPath: "/icons/Vue.js.svg" },
