@@ -64,7 +64,7 @@ export default function WorkSection() {
              */
             <div
               key={`${work.company}-${work.title}-${idx}`}
-              className="grid grid-cols-[20px_1fr_auto] gap-x-5 pb-12 last:pb-0"
+              className="grid grid-cols-[20px_1fr] sm:grid-cols-[20px_1fr_auto] gap-x-5 pb-12 last:pb-0"
             >
               {/* ── Rail cell: marker centered in the 20px column ── */}
               <div className="flex justify-center pt-[4px]">
@@ -113,12 +113,19 @@ export default function WorkSection() {
                   </div>
                 )}
 
+                {/* Date — mobile only, shown below metadata */}
+                <div className="sm:hidden mt-[6px]">
+                  <span className="text-[11px] text-muted-foreground/65 font-normal tabular-nums">
+                    {dateStr}
+                  </span>
+                </div>
+
                 {/* Description + achievements */}
                 {work.description && <WorkDescription raw={work.description} />}
               </div>
 
-              {/* ── Date column — right-aligned, muted ── */}
-              <div className="text-right pt-[4px]">
+              {/* ── Date column — desktop only, right-aligned ── */}
+              <div className="hidden sm:block text-right pt-[4px]">
                 <span className="text-[12px] text-muted-foreground/65 font-normal whitespace-nowrap tabular-nums">
                   {dateStr}
                 </span>

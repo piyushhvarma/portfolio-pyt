@@ -61,7 +61,7 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
             <div className="flex flex-col gap-4 text-base font-sans leading-relaxed text-muted-foreground">
               <p>
-                Aspiring Software Engineer and product builder passionate about AI, UI/UX, and problem-solving. I love creating web apps people actually use while learning openly along the journey.
+                Software engineer and product builder with experience developing scalable AI solutions and user-centric web applications.
               </p>
               <p>
                 Currently building interactive applications with{" "}

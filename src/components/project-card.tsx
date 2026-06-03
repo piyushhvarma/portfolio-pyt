@@ -12,24 +12,14 @@ import Image from "next/image";
 
 function ProjectVideo({ src, className }: { src: string; className?: string }) {
   return (
-    <div
-      className={className}
-      dangerouslySetInnerHTML={{
-        __html: `
-          <video
-            src="${src}"
-            autoplay
-            loop
-            muted
-            playsinline
-            preload="auto"
-            class="w-full h-full object-cover object-top"
-            style="width: 100%; height: 100%; object-fit: cover; object-position: top;"
-          >
-            Your browser does not support the video tag.
-          </video>
-        `
-      }}
+    <video
+      src={src}
+      className={cn("w-full h-full object-cover object-top", className)}
+      autoPlay
+      muted
+      playsInline
+      loop
+      preload="metadata"
     />
   );
 }
@@ -124,24 +114,34 @@ export function ProjectCard({
         className
       )}
     >
+      {/*
+       * Thumbnail area — video/image is NOT inside <Link>.
+       * iOS Safari hijacks taps on videos inside <a> tags and silently
+       * blocks autoplay. Instead we use an absolute transparent overlay
+       * link so the video element is always a direct child of a plain div.
+       */}
       <div className="relative shrink-0">
+        {video ? (
+          <ProjectVideo
+            src={video}
+            className="w-full aspect-video"
+          />
+        ) : image ? (
+          <ProjectImage src={image} alt={title} />
+        ) : (
+          <div className="w-full aspect-video bg-muted" />
+        )}
+
+        {/* Invisible navigation overlay — sits above media, below badge */}
         <Link
           href={href || "#"}
           target="_blank"
           rel="noopener noreferrer"
-          className="block"
-        >
-          {video ? (
-            <ProjectVideo
-              src={video}
-              className="w-full aspect-video object-cover object-top"
-            />
-          ) : image ? (
-            <ProjectImage src={image} alt={title} />
-          ) : (
-            <div className="w-full aspect-video bg-muted" />
-          )}
-        </Link>
+          className="absolute inset-0 z-[1]"
+          aria-label={`Open ${title}`}
+          tabIndex={-1}
+        />
+
         {caseStudyLink && (
           <div className="absolute top-3 right-3 z-10">
             <ProjectLink link={caseStudyLink} />
