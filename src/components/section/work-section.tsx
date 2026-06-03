@@ -1,105 +1,187 @@
 "use client";
-import { useState } from "react";
-import Image from "next/image";
-import Markdown from "react-markdown";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+
+import Link from "next/link";
 import { DATA } from "@/data/resume";
-import { ChevronDown, ChevronRight } from "lucide-react";
-import { cn } from "@/lib/utils";
 
-function LogoImage({ src, alt, srcDark }: { src: string; alt: string; srcDark?: string }) {
-  const [imageError, setImageError] = useState(false);
-
-  if (!src || imageError) {
-    return (
-      <div className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border bg-muted flex-none" />
-    );
-  }
-
-  return (
-    <>
-      <Image
-        src={src}
-        alt={alt}
-        width={40}
-        height={40}
-        className={cn(
-          "size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border overflow-hidden object-contain flex-none",
-          srcDark ? "dark:hidden" : ""
-        )}
-        onError={() => setImageError(true)}
-      />
-      {srcDark && (
-        <Image
-          src={srcDark}
-          alt={alt}
-          width={40}
-          height={40}
-          className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border overflow-hidden object-contain flex-none hidden dark:block"
-          onError={() => setImageError(true)}
-        />
-      )}
-    </>
-  );
+interface WorkEntry {
+  company: string;
+  href?: string;
+  location?: string;
+  employmentType?: string;
+  title: string;
+  start: string;
+  end?: string;
+  description?: string;
 }
 
+/**
+ * WorkSection — editorial two-column timeline.
+ *
+ * Structure per row:
+ *   [thin 1px line + subtle dot]  [title · company / meta / description / bullets]  [date range]
+ *
+ * Design principles:
+ * - Timeline is a visual guide only (~5% visual weight)
+ * - Content block occupies ~80% of the row
+ * - Date column occupies ~15%, right-aligned, muted
+ * - No tech badges, no pill tags, no logos
+ * - No oversized typography
+ * - Inline company on same line as title
+ */
 export default function WorkSection() {
   return (
-    <Accordion type="single" collapsible className="w-full grid gap-6">
-      {DATA.work.map((work: any) => (
-        <AccordionItem
-          key={work.company}
-          value={work.company}
-          className="w-full border-b-0 grid gap-2"
-        >
-          <AccordionTrigger className="hover:no-underline p-0 cursor-pointer transition-colors rounded-none group [&>svg]:hidden">
-            <div className="flex items-center gap-x-3 justify-between w-full text-left">
-              <div className="flex items-center gap-x-3 flex-1 min-w-0">
-                <LogoImage src={work.logoUrl} srcDark={work.logoUrlDark} alt={work.company} />
-                <div className="flex-1 min-w-0 gap-0.5 flex flex-col">
-                  <div className="font-semibold leading-none flex items-center gap-2">
-                    {work.company}
-                    <span className="relative inline-flex items-center w-3.5 h-3.5">
-                      <ChevronRight
-                        className={cn(
-                          "absolute h-3.5 w-3.5 shrink-0 text-muted-foreground stroke-2 transition-all duration-300 ease-out",
-                          "translate-x-0 opacity-0",
-                          "group-hover:translate-x-1 group-hover:opacity-100",
-                          "group-data-[state=open]:opacity-0 group-data-[state=open]:translate-x-0"
-                        )}
-                      />
-                      <ChevronDown
-                        className={cn(
-                          "absolute h-3.5 w-3.5 shrink-0 text-muted-foreground stroke-2 transition-all duration-200",
-                          "opacity-0 rotate-0",
-                          "group-data-[state=open]:opacity-100 group-data-[state=open]:rotate-180"
-                        )}
-                      />
-                    </span>
+    /*
+     * Outer wrapper: position:relative so the single vertical line element
+     * can be absolutely placed. The line lives at left:10px — the exact
+     * horizontal center of the 20px rail column used in every grid row below.
+     */
+    <div className="relative">
+
+      {/* ── Single vertical timeline rule — anchored at left:10px ── */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-[10px] top-[13px] bottom-0 w-px bg-border/65"
+      />
+
+      <div className="flex flex-col">
+        {(DATA.work as unknown as WorkEntry[]).map((work, idx) => {
+          const isLatest = idx === 0;
+          const dateStr =
+            work.end === "Present" || !work.end
+              ? `${work.start} – Present`
+              : `${work.start} – ${work.end}`;
+
+          return (
+            /*
+             * Each entry is a 3-column CSS grid:
+             *   col-1: 20px rail  — marker lives here, centered via justify-items-center
+             *   col-2: 1fr        — content block (title, meta, bullets)
+             *   col-3: auto       — date range, right-aligned
+             *
+             * The 20px rail is identical for every row, so every dot's
+             * horizontal center is always exactly left:10px — matching the line.
+             * No per-item offset math, no drift.
+             */
+            <div
+              key={`${work.company}-${work.title}-${idx}`}
+              className="grid grid-cols-[20px_1fr_auto] gap-x-5 pb-12 last:pb-0"
+            >
+              {/* ── Rail cell: marker centered in the 20px column ── */}
+              <div className="flex justify-center pt-[4px]">
+                {isLatest ? (
+                  /* Active: soft green halo + solid core */
+                  <div className="flex items-center justify-center h-[18px] w-[18px] flex-shrink-0 rounded-full bg-emerald-500/20">
+                    <div className="h-[8px] w-[8px] rounded-full bg-emerald-500" />
                   </div>
-                  <div className="font-sans text-sm text-muted-foreground">
-                    {work.title}
-                  </div>
-                </div>
+                ) : (
+                  /* Past: 5px, near-invisible */
+                  <div className="h-[5px] w-[5px] flex-shrink-0 rounded-full bg-border mt-[1px]" />
+                )}
               </div>
-              <div className="flex items-center gap-1 text-xs tabular-nums text-muted-foreground text-right flex-none">
-                <span>
-                  {work.start} - {work.end ?? "Present"}
+
+              {/* ── Content block ── */}
+              <div className="min-w-0">
+
+                {/* Title · Company — inline */}
+                <div className="flex flex-wrap items-baseline gap-x-[6px] leading-snug">
+                  <span className="text-[18px] font-semibold text-foreground tracking-tight">
+                    {work.title}
+                  </span>
+                  <span className="text-muted-foreground/50 text-[15px] font-light select-none">
+                    ·
+                  </span>
+                  {work.href ? (
+                    <Link
+                      href={work.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[16px] font-normal text-muted-foreground hover:text-foreground transition-colors duration-200 hover:underline underline-offset-2"
+                    >
+                      {work.company}
+                    </Link>
+                  ) : (
+                    <span className="text-[16px] font-normal text-muted-foreground">
+                      {work.company}
+                    </span>
+                  )}
+                </div>
+
+                {/* Metadata */}
+                {(work.location || work.employmentType) && (
+                  <div className="mt-[6px] text-[12px] text-muted-foreground/70 font-normal tracking-wide">
+                    {[work.location, work.employmentType].filter(Boolean).join(" · ")}
+                  </div>
+                )}
+
+                {/* Description + achievements */}
+                {work.description && <WorkDescription raw={work.description} />}
+              </div>
+
+              {/* ── Date column — right-aligned, muted ── */}
+              <div className="text-right pt-[4px]">
+                <span className="text-[12px] text-muted-foreground/65 font-normal whitespace-nowrap tabular-nums">
+                  {dateStr}
                 </span>
               </div>
             </div>
-          </AccordionTrigger>
-          <AccordionContent className="p-0 ml-13 text-xs sm:text-sm text-muted-foreground prose dark:prose-invert max-w-full">
-            <Markdown>{work.description}</Markdown>
-          </AccordionContent>
-        </AccordionItem>
-      ))}
-    </Accordion>
+          );
+        })}
+      </div>
+    </div>
   );
 }
 
+/**
+ * Parses the markdown-like description string and renders:
+ * - Leading paragraph text (before bullets)
+ * - Bullet list (lines starting with "- ")
+ *
+ * Strips bold markers (**text**) and renders plain text to avoid
+ * the "everything is bold" problem.
+ */
+function WorkDescription({ raw }: { raw: string }) {
+  const lines = raw.split("\n").map((l) => l.trim()).filter(Boolean);
+
+  const bullets: string[] = [];
+  const paragraphs: string[] = [];
+
+  for (const line of lines) {
+    if (line.startsWith("- ")) {
+      bullets.push(stripMarkdown(line.slice(2)));
+    } else {
+      paragraphs.push(stripMarkdown(line));
+    }
+  }
+
+  return (
+    <div className="mt-[14px] max-w-[680px]">
+      {paragraphs.length > 0 && (
+        <div className="text-[14px] text-muted-foreground/85 leading-relaxed space-y-1">
+          {paragraphs.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
+        </div>
+      )}
+
+      {bullets.length > 0 && (
+        <ul className="mt-[10px] space-y-[8px]">
+          {bullets.map((bullet, i) => (
+            <li
+              key={i}
+              className="flex gap-[10px] text-[13.5px] text-muted-foreground/80 leading-relaxed"
+            >
+              <span className="mt-[6px] flex-shrink-0 h-[3px] w-[3px] rounded-full bg-muted-foreground/50" aria-hidden="true" />
+              <span>{bullet}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+/** Remove **bold** markers from markdown strings */
+function stripMarkdown(text: string): string {
+  // Remove bold: **text** → text
+  return text.replace(/\*\*(.*?)\*\*/g, "$1");
+}
