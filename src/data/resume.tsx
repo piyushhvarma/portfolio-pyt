@@ -192,7 +192,7 @@ export const DATA = {
     },
     {
       title: "Road Damage Detection",
-      href: "/blog/road-damage-detection-case-study",
+      href: "https://project-pothole.vercel.app/",
       dates: "March 2026 - April 2026",
       active: true,
       description:
