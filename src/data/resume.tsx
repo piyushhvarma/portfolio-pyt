@@ -191,7 +191,7 @@ export const DATA = {
       video: "/muj-aiml-seating-arrangement.mp4",
     },
     {
-      title: "Road Damage Detection",
+      title: "Pothole Patrol",
       href: "https://project-pothole.vercel.app/",
       dates: "March 2026 - April 2026",
       active: true,
@@ -210,7 +210,7 @@ export const DATA = {
       links: [
         {
           type: "Source",
-          href: "https://github.com/piyushhvarma",
+          href: "https://github.com/piyushhvarma/ProjectPothole",
           icon: <Icons.github className="size-3" />,
         },
         {
